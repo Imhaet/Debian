@@ -1,12 +1,12 @@
 ## FIRST THING FIRST
 
-This installation list is based on my preferences while trying out Debian 10 (Buster) on my - quite old - macbook and is not a definitive procedure. Feel free to use at your own peril.
+This installation list is based on my preferences while trying out Debian 10 (Buster) Xfce :mouse: on my - quite old - macbook and is not a definitive procedure. Feel free to use at your own peril.
 
 <br />
 
 ### Settings and Partitions
 
-Apple MacBook "Core 2 Duo" 2.0 13" (Unibody) Late 2008 Aluminum AKA MacBook5,1
+:computer: Apple MacBook "Core 2 Duo" 2.0 13" (Unibody) Late 2008 Aluminum AKA MacBook5,1
 
 Intel Core2 Duo P7350 @ 2x 1.995Ghz | amd64 EFI | 4GB RAM | NVIDIA GeForce 9400M @ 256MB
 
@@ -49,7 +49,7 @@ deb-src http://deb.debian.org/debian buster-updates main contrib non-free
 deb http://security.debian.org/debian-security/ buster/updates main
 deb-src http://security.debian.org/debian-security/ buster/updates main
 ```
-* *^X* to **exit**, then **save** the file as `/etc/apt/sources.list`
+* *^X* to **exit**, then **save** :floppy_disk: the file as `/etc/apt/sources.list`
 (Note: do not add a new line. Just add " contrib non-free" to the end of your existing line.)
 * Update the list of available packages:
 ```
@@ -89,76 +89,12 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/Synaptics
 
 <br />
 
-- [x] **Sound (For MacBook Aluminum - late 2008)**
+- [x] **Sound (For MacBook Aluminum - late 2008)** :speaker:
 ```
 sudo alsamixer
 ```
 * Set all up Master, PCM, Line-Out and switch from 2ch to 6ch.
 * Search for the **Volume** plug in (PulseAudio Plugin) and add it to the *Panel*, and make sure the **Enable keyboard shortcuts for volume control** is `ON`.
-
----
-
-<br />
-
-## COSMETICS
-
-<br />
-
-- [x] **Install Themes and Icons**
-* Open *Synaptic Package Manager* and search for **-theme**, **-icon** and **greeter**
-* Select and install:
-```
-arc-theme
-papirus-icon-theme
-lightdm-gtk-greeter-settings
-```
-* Open the *Settings Manager*
-* In *Appearance -> Style* select the to **Arc-Dark**
-* In *Appearance -> Icons* select the to **Papirus-Dark**
-* In *Window Manager -> Style* select the to **Arc-Dark**
-* Also change the **Style, Icons, etc.** in the *LightDM GTL+ Greeter settings*
-
-<br />
-
-- [x] **Advanced Themes and Icons**
-* Most themes and icons can be downloaded from [Xfce-look.org](https://Xfce-look.org); Flat-Remix is a good choice.
-* The basic details of the procedure are:
-1. Download the archive.
-2. Extract it with the right click of your mouse.
-3. Create the **.icons** and **.themes** folders in your home directory. The fastest way to do that is by running in the terminal: `mkdir ~/.icons ~/.themes`.
-4. Move the extracted theme folders to the ~/.theme folder and the extracted icons to the ~/.icons folder. You can make the .theme and .icons folders visible by pressing Ctrl+H or in the menu of your file manager *View -> Show Hidden Files*.
-* More detailed information about Themes and Icons can be found [here](https://averagelinuxuser.com/xfce-look-modern-and-beautiful/).
-
-<br />
-
-- [x] **Configure Greeter**
-* Create user configuration file for **lightDM**, the greeter that asks for user and credentials, and edit it:
-```
-sudo nano /usr/share/lightdm/lightdm.conf.d/01_my.conf
-```
-* Add the following lines to the file and save:
-```
-[SeatDefaults]
-greeter-hide-users=false
-```
-* After rebooting, the user name will be prompted.
-
-<br />
-
-### KEYBOARD SHORTCUTS
-
-<br />
-
-Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
-
-- [x] **Terminal**
-* `xfce4-terminal` runs with *Ctrl+Alt+T*
-
-- [x] **Dropdown Terminal**
-* `xfce4-terminal --drop-down` runs with *Super+T*
-
-- [x] **Kill Frozen Applications**
-* `xkill` runs with *Ctrl+Alt+Esc*
 
 ---
 
@@ -209,11 +145,83 @@ sudo apt install firefox
 
 <br />
 
-## OTHER APPS
+## COSMETICS
 
 <br />
 
-- [x] **Atom** [atom.io](https://atom.io)
+- [x] **Install Themes and Icons**
+* Open *Synaptic Package Manager* and search for **-theme**, **-icon** and **greeter**
+* Select and install:
+```
+arc-theme
+papirus-icon-theme
+lightdm-gtk-greeter-settings
+```
+* Open the *Settings Manager*
+* In *Appearance -> Style* select the to **Arc-Dark**
+* In *Appearance -> Icons* select the to **Papirus-Dark**
+* In *Window Manager -> Style* select the to **Arc-Dark**
+* Also change the **Style, Icons, etc.** in the *LightDM GTL+ Greeter settings*
+
+<br />
+
+- [x] **Advanced Themes and Icons**
+* Most themes and icons can be downloaded from [Xfce-look.org](https://Xfce-look.org); Flat-Remix is a good choice.
+* The basic details of the procedure are:
+1. Download the archive.
+2. Extract it with the right click of your mouse.
+3. Create the **.icons** and **.themes** folders in your home directory. The fastest way to do that is by running in the terminal: `mkdir ~/.icons ~/.themes`.
+4. Move the extracted theme folders to the ~/.theme folder and the extracted icons to the ~/.icons folder. You can make the .theme and .icons folders visible by pressing Ctrl+H or in the menu of your file manager *View -> Show Hidden Files*.
+* More detailed information about Themes and Icons can be found [here](https://averagelinuxuser.com/xfce-look-modern-and-beautiful/).
+
+<br />
+
+- [x] **Configure Greeter**
+* Create user configuration file for **lightDM**, the greeter that asks for user and credentials, and edit it:
+```
+sudo nano /usr/share/lightdm/lightdm.conf.d/01_my.conf
+```
+* Add the following lines to the file and save :floppy_disk: :
+```
+[SeatDefaults]
+greeter-hide-users=false
+```
+* After rebooting, the user name will be prompted.
+
+<br />
+
+### KEYBOARD SHORTCUTS
+
+<br />
+
+Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
+
+- [x] **Terminal**
+* `xfce4-terminal` runs with *Ctrl+Alt+T*
+
+- [x] **Dropdown Terminal**
+* `xfce4-terminal --drop-down` runs with *Super+T*
+
+- [x] **Kill Frozen Applications**
+* `xkill` runs with *Ctrl+Alt+Esc*
+
+Go to *Settings Manager -> Windows Manager -> Keyboard*.
+
+- [x] **Windows Desktop Tile**
+* `Tile window to the top` runs with *Super+Up*
+* `Tile window to the bottom` runs with *Super+Down*
+* `Tile window to the left` runs with *Super+Left*
+* `Tile window to the right` runs with *Super+Right*
+
+---
+
+<br />
+
+## FINISHING (OPTIONAL) TOUCHES
+
+<br />
+
+- [x] **Atom** :link: [atom.io](https://atom.io)
 * To install Atom on Debian, Ubuntu, or related distributions, add our official package repository to your system by running the following commands:
 ```
 wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
@@ -256,3 +264,4 @@ sudo apt autoclean -y
 ```
 
 <br />
+:tada:
