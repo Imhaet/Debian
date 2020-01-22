@@ -162,6 +162,7 @@ lightdm-gtk-greeter-settings
 * In *Appearance -> Icons* select the to **Papirus-Dark**
 * In *Window Manager -> Style* select the to **Arc-Dark**
 * Also change the **Style, Icons, etc.** in the *LightDM GTL+ Greeter settings*
+* Finally, consider adding the **Whisker Menu** on the *Panel Preferences -> Items*
 
 <br />
 
