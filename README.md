@@ -2,11 +2,19 @@
 
 This installation list is based on my preferences while trying out Debian 10 (Buster) on my late 2008 macbook and is not a definitive procedure. Feel free to use at your own peril.
 
-Settings and Partitions
+<br />
 
-sda1  fat32   /boot/efi   142MiB    boot,esp
-sda3  ext4    /           141.28GiB
-sda2  linuxswap           7.63GiB (7812MiB)   swap
+### Settings and Partitions
+
+Apple MacBook "Core 2 Duo" 2.0 13" (Unibody) Late 2008 Aluminum AKA MacBook5,1
+
+Intel Core2 Duo P7350 @ 2x 1.995Ghz | amd64 EFI | 4GB RAM | NVIDIA GeForce 9400M @ 256MB
+
+| Partition | File System | Mount     | Size              | Flags    |
+| ---       | ---         | ---       | ---               | ---      |
+| sda1      | fat32       | /boot/efi | 142MiB            | boot,esp |
+| sda3      | ext4        | /         | 141.28GiB         |          |
+| sda2      | linuxswap   |           | 7.63GiB (7812MiB) | swap     |
 
 ---
 
