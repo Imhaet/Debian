@@ -1,6 +1,6 @@
 ## FIRST THING FIRST
 
-This installation list is based on my preferences while trying out Debian 10 (Buster) on my late 2008 macbook and is not a definitive procedure. Feel free to use at your own peril.
+This installation list is based on my preferences while trying out Debian 10 (Buster) on my - quite old - macbook and is not a definitive procedure. Feel free to use at your own peril.
 
 <br />
 
