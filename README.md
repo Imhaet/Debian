@@ -156,36 +156,21 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 
 <br />
 
-## TERMINAL STUFF --- edit from here!
+## TERMINAL STUFF
 
 <br />
 
-- [x] **Enable PPA (Properties Commons) & Ubuntu extras**
+- [x] **Enable and Start Firewall**
 ```
-sudo apt install software-properties-common
-sudo apt install ubuntu-restricted-extras
+sudo apt install ufw
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow ssh
 ```
-
-<br />
-
-- [x] **elementaryOS Tweaks**
+* If more ports need to be open (eg. port 80 for web server), use the comand `sudo ufw allow` and then the *Port ##*. Finally, enable UFW (Uncomplicated FireWall).
 ```
-sudo add-apt-repository ppa:philip.scott/elementary-tweaks
-sudo apt-get update
-sudo apt-get install elementary-tweaks
-```
-
-- [x] **Go to** `System Settings > Tweaks`
-* In `Appearance/Window Controls/Layout` change to **Minimize Left**
-* Turn **OFF** the setting `Files/Single click`
-* Turn **OFF** the setting `Terminal/Natural copy paste`
-* Turn **OFF** the setting `Terminal/Remember tabs`
-
-<br />
-
-- [x] **Installed TLP package to Improve Battery Life**
-```
-sudo apt install tlp tlp-rdw
+sudo ufw enable
+sudo ufw status
 ```
 
 <br />
@@ -212,7 +197,7 @@ sudo apt install vlc
 sudo apt install chromium-browser
 ```
 
-- [x] **Firefox**
+- [x] ~~**Firefox**~~
 ```
 sudo apt install firefox
 ```
@@ -255,17 +240,13 @@ sudo apt-get -f install
 
 <br />
 
-- [x] ~~**Uninstall Apps**~~
-```
-sudo apt purge epiphany-browser epiphany-browser-data
-sudo apt purge pantheon-mail
-sudo apt purge noise
-sudo apt purge audience
-```
+- [x] **Uninstall Apps**
+* Uninstall non needed apps using the `sudo apt purge PROGRAM` command.
 
 <br />
 
-- [x] ~~**Clean Up OS**~~
+- [x] **Clean Up OS**
+* After uninstalling, make sure there are no dependencies left by running the following commands:
 ```
 sudo apt autoremove -y
 sudo apt autoclean -y
