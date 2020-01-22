@@ -192,11 +192,6 @@ sudo apt-get install git
 sudo apt install vlc
 ```
 
-- [x] ~~**Google Chromium**~~
-```
-sudo apt install chromium-browser
-```
-
 - [x] ~~**Firefox**~~
 ```
 sudo apt install firefox
