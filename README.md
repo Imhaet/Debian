@@ -66,7 +66,7 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 
 <br />
 
-- [x] **Enable Tapping on Touchpad**
+- [x] **Enable Tapping and Reverse Scrolling (Natural) on Touchpad**
 * Create and edit the config file `/etc/X11/xorg.conf.d/40-libinput.conf` to enable tapping.
 ```
 sudo nano /etc/X11/xorg.conf.d/40-libinput.conf
@@ -78,6 +78,7 @@ sudo nano /etc/X11/xorg.conf.d/40-libinput.conf
      MatchDevicePath "/dev/input/event*"
      Driver "libinput"
      Option "Tapping" "on"
+     Option "NaturalScrolling" "true"
 EndSection'
 ```
 * Restart the DM:
