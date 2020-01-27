@@ -142,6 +142,12 @@ sudo apt install vlc
 sudo apt install firefox
 ```
 
+- [x] **Skype for Linux**
+```
+wget https://go.skype.com/skypeforlinux-64.deb
+sudo apt install ./skypeforlinux-64.deb
+```
+
 ---
 
 <br />
