@@ -10,6 +10,8 @@ This installation list is based on my preferences while trying out Debian 10 (Bu
 
 Intel Core2 Duo P7350 @ 2x 1.995Ghz | amd64 EFI | 4GB RAM | NVIDIA GeForce 9400M @ 256MB
 
+UEFI Boot with GUID Partition Table
+
 | Partition | File System | Mount     | Size              | Flags    |
 | ---       | ---         | ---       | ---               | ---      |
 | sda1      | fat32       | /boot/efi | 142MiB            | boot,esp |
