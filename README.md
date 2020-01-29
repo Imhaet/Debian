@@ -33,7 +33,7 @@ sudo apt-get upgrade
 <br />
 
 - [x] **Install Broadcom Wireless**
-* Add a "contrib" component to your existing repository line in `/etc/apt/sources.list` with nano or other editor. For this we'll first make a copy of the original file, then edit the new file. For example:
+* Add a "contrib" and "non-free" components to your existing repository line in `/etc/apt/sources.list` with nano or other editor. For this we'll first make a copy of the original file, then edit the new file. For example:
 ```
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.OLD
 sudo nano /etc/apt/sources.list.OLD
