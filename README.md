@@ -28,8 +28,8 @@ UEFI Boot with GUID Partition Table
 
 - [x] **Update OS**
 ```
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt update
+sudo apt upgrade
 ```
 
 <br />
@@ -51,8 +51,8 @@ deb-src http://deb.debian.org/debian buster-updates main contrib non-free
 deb http://security.debian.org/debian-security/ buster/updates main
 deb-src http://security.debian.org/debian-security/ buster/updates main
 ```
-* *^X* to **exit**, then **save** :floppy_disk: the file as `/etc/apt/sources.list`
-(Note: do not add a new line. Just add " contrib non-free" to the end of your existing line.)
+* *Note:* Do not add a new line. Just add " contrib non-free" to the end of your existing line.
+* *Ctrl+X* to **exit**, then **save** :floppy_disk: the file as `/etc/apt/sources.list`. (Yes, you are saving it with a different name).
 * Update the list of available packages:
 ```
 sudo apt update
@@ -71,17 +71,18 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 - [x] **Enable Tapping and Reverse Scrolling (Natural) on Touchpad**
 * Create and edit the config file `/etc/X11/xorg.conf.d/40-libinput.conf` to enable tapping.
 ```
+sudo mkdir -p /etc/X11/xorg.conf.d
 sudo nano /etc/X11/xorg.conf.d/40-libinput.conf
 ```
 ```
-'Section "InputClass"
-     Identifier "libinput touchpad catchall"
-     MatchIsTouchpad "on"
-     MatchDevicePath "/dev/input/event*"
-     Driver "libinput"
-     Option "Tapping" "on"
-     Option "NaturalScrolling" "true"
-EndSection'
+Section "InputClass"
+    Identifier "libinput touchpad catchall"
+    MatchIsTouchpad "on"
+    MatchDevicePath "/dev/input/event*"
+    Driver "libinput"
+    Option "Tapping" "on"
+    Option "NaturalScrolling" "true"
+EndSection
 ```
 * Restart the DM:
 ```
