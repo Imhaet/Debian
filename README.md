@@ -51,8 +51,8 @@ deb-src http://deb.debian.org/debian buster-updates main contrib non-free
 deb http://security.debian.org/debian-security/ buster/updates main
 deb-src http://security.debian.org/debian-security/ buster/updates main
 ```
-* *Note:* Do not add a new line. Just add " contrib non-free" to the end of your existing line.
-* *Ctrl+X* to **exit**, then **save** :floppy_disk: the file as `/etc/apt/sources.list`. (Yes, you are saving it with a different name).
+* *Note:* Do not add a new line. Just add "contrib non-free" to the end of your existing line.
+* *Ctrl+X* to **exit**, then **save** :floppy_disk: the file as `/etc/apt/sources.list`. (Yes, you are saving it with the original name).
 * Update the list of available packages:
 ```
 sudo apt update
@@ -185,6 +185,11 @@ lightdm-gtk-greeter-settings
 4. Move the extracted theme folders to the ~/.theme folder and the extracted icons to the ~/.icons folder. You can make the .theme and .icons folders visible by pressing Ctrl+H or in the menu of your file manager *View -> Show Hidden Files*.
 * More detailed information about Themes and Icons can be found [here](https://averagelinuxuser.com/xfce-look-modern-and-beautiful/).
 
+* If some of the icon themes show a Xfce icons gtk-update-icon-cache warning, run the following command in the terminal:
+```
+gtk-update-icon-cache ~/.icons/yourIconsTheme
+```
+
 <br />
 
 - [x] **Configure Greeter**
@@ -264,8 +269,6 @@ sudo apt-get -f install
 
 - [x] **Uninstall Apps**
 * Uninstall non needed apps using the `sudo apt purge PROGRAM` command.
-
-<br />
 
 - [x] **Clean Up OS**
 * After uninstalling, make sure there are no dependencies left by running the following commands:
