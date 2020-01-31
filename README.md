@@ -273,10 +273,11 @@ sudo apt autoclean -y
 :tada:
 
 ---
+---
 
 <br />
 
-## PERSONAL DE SETTINGS IN XFCE
+### PERSONAL DE SETTINGS IN XFCE
 
 <br />
 
@@ -323,16 +324,30 @@ sudo apt autoclean -y
     * *Appearance* -> **Check** Show menu hierarchy
     * *Behavior* -> **Check** Position search entry next to panel button
     * *Behavior* -> **Check** Position categories next to panel button
-    * *Commands* -> Run the `sdfdf` command for the Edit Profile
+    * *Commands* -> Run the `xfce4-taskmanager` command for the Edit Profile
+  * **Separator** -> Transparent
+  * **Separator** -> Separator
   * **Show Desktop**
-  * **Launcher**
-  * **Launcher**
-  * **Trash**
+  * **Launcher** -> File Manager
+  * **Launcher** -> Firefox ESR
+  * **Trash Applet**
   * **Window Buttons**
-  * **Separator**
-  * 
+    * *Filtering* -> **Check** Show only minimized windows
+  * **Separator** -> Transparent; Expand
+  * **Separator** -> Separator
+  * **Power Manager Plugin** -> Show Percentage
+  * **Battery Monitor** -> **Check** only Display power
+  * **PulseAudio Plugin**
+  * **Notification Area**
+    * *Appearance* -> Maximum icon size (px): **20**
+    * *Appearance* -> **Uncheck** Show frame
+  * **Clock**
 * *Display* -> Make the Row Size (pixels): to **28**
 * *Appearance* -> Set Alpha: to **0**
 * **Move** Panel 1 to the bottom
+
+- [x] **User Icon in Whisker Menu**
+I don't like the red silouwete icon for the user on Flat-Remix, so I will change it to the Debian logo.
+* Go to ~/.icons/flat-Remix-Blue-Dark/apps/scalable/system-users.svg -svg.OLD
 
 <br />
