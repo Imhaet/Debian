@@ -127,12 +127,12 @@ sudo ufw status
 
 - [x] **GParted** 
 ```
-sudo apt-get install gparted
+sudo apt install gparted
 ```
 
 - [x] **GIT**
 ```
-sudo apt-get install git
+sudo apt install git
 ```
 
 - [x] **VLC**
@@ -221,14 +221,6 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 - [x] **Kill Frozen Applications**
 * `xkill` runs with *Ctrl+Alt+Esc*
 
-Go to *Settings Manager -> Windows Manager -> Keyboard*.
-
-- [x] **Windows Desktop Tile**
-* `Tile window to the top` runs with *Super+Up*
-* `Tile window to the bottom` runs with *Super+Down*
-* `Tile window to the left` runs with *Super+Left*
-* `Tile window to the right` runs with *Super+Right*
-
 ---
 
 <br />
@@ -279,3 +271,63 @@ sudo apt autoclean -y
 
 <br />
 :tada:
+
+---
+
+<br />
+
+## PERSONAL DE SETTINGS IN XFCE
+
+<br />
+
+- [x] **Appearance**
+* *Style* -> **Flat-Remix-GTK-Blue-Dark**
+* *Icons* -> **Flat-Remix-Blue-Dark**
+
+- [x] **Window Manager**
+* *Style* -> **Flat-Remix-GTK-Blue-Dark**
+* *Style | Button layout* -> Remove the **Minimize** button
+* *Keyboard* -> `Tile window to the top` runs with **Super+Up**
+* *Keyboard* -> `Tile window to the bottom` runs with **Super+Down**
+* *Keyboard* -> `Tile window to the left` runs with **Super+Left**
+* *Keyboard* -> `Tile window to the right` runs with **Super+Right**
+
+- [x] **LightDM GTK+ Greeter settings**
+* *Appearance* -> Select **Arc-Dark** for the Theme
+* *Appearance* -> Select **Papirus-Dark** for the Icons
+* *Appearance* -> Change the Default user image
+
+- [x] **File Manager Preferences**
+* *Display* -> View new folders using: **Detailed List View**
+
+- [x] **Workspaces**
+* *General* -> Number of wokspaces: **3**
+
+- [x] **Terminal Preferences**
+* *Drop-down* -> Set Height to **70 %**
+* *Appearance* -> Set **Transparent background** to **0.70** Opacity
+* *Appearance* -> **Uncheck** Display menubar in new windows
+
+- [x] **Desktop**
+* *Background* -> **Uncheck** Apply to all workspaces
+* *Background* -> Change the Folder: **path**
+* *Icons* -> **Uncheck** Home on the Default Icons
+* *Icons* -> **Uncheck** Filesystem on the Default Icons
+* *Icons* -> **Uncheck** Trash on the Default Icons
+
+- [x] **Panel**
+* **Detailed List View** the 2nd Panel
+* *Items* -> The Items list is as follows:
+  * Whisker Menu
+  * Show Desktop
+  * Launcher
+  * Launcher
+  * Trash
+  * Window Buttons
+  * Separator
+  * 
+* *Display* -> Make the Row Size (pixels): to **28**
+* *Appearance* -> Set Alpha: to **0**
+* **Move** Panel 1 to the bottom
+
+<br />
