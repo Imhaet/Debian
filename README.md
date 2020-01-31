@@ -270,7 +270,7 @@ sudo apt autoclean -y
 ```
 
 <br />
-:tada:
+:tada: THE END :tada:
 
 <br />
 <br />
