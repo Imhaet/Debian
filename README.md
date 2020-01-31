@@ -272,12 +272,15 @@ sudo apt autoclean -y
 <br />
 :tada:
 
----
+<br />
+<br />
+
 ---
 
 <br />
+<br />
 
-### PERSONAL DE SETTINGS IN XFCE
+## PERSONAL DE SETTINGS IN XFCE
 
 <br />
 
@@ -339,7 +342,7 @@ sudo apt autoclean -y
   * **Battery Monitor** -> **Check** only Display power
   * **PulseAudio Plugin**
   * **Notification Area**
-    * *Appearance* -> Maximum icon size (px): **20**
+    * *Appearance* -> Maximum icon size (px): **22**
     * *Appearance* -> **Uncheck** Show frame
   * **Clock**
 * *Display* -> Make the Row Size (pixels): to **28**
@@ -347,7 +350,11 @@ sudo apt autoclean -y
 * **Move** Panel 1 to the bottom
 
 - [x] **User Icon in Whisker Menu**
-I don't like the red silouwete icon for the user on Flat-Remix, so I will change it to the Debian logo.
-* Go to ~/.icons/flat-Remix-Blue-Dark/apps/scalable/system-users.svg -svg.OLD
+* I don't like the red silouwete icon for the user on Flat-Remix, so I will change it to the Debian logo.
+```
+mv ~/.icons/flat-Remix-Blue-Dark/apps/scalable/system-users.svg ~/.icons/flat-Remix-Blue-Dark/apps/scalable/system-users.svg.OLD
+mv ~/.debian_setup/UserIcons/debian.svg ~/.icons/flat-Remix-Blue-Dark/apps/scalable/system-users.svg
+```
 
 <br />
+:tada:
