@@ -318,13 +318,18 @@ sudo apt autoclean -y
 - [x] **Panel**
 * **Detailed List View** the 2nd Panel
 * *Items* -> The Items list is as follows:
-  * Whisker Menu
-  * Show Desktop
-  * Launcher
-  * Launcher
-  * Trash
-  * Window Buttons
-  * Separator
+  * **Whisker Menu**
+    * *Appearance* -> **Uncheck** Show application descriptions
+    * *Appearance* -> **Check** Show menu hierarchy
+    * *Behavior* -> **Check** Position search entry next to panel button
+    * *Behavior* -> **Check** Position categories next to panel button
+    * *Commands* -> Run the `sdfdf` command for the Edit Profile
+  * **Show Desktop**
+  * **Launcher**
+  * **Launcher**
+  * **Trash**
+  * **Window Buttons**
+  * **Separator**
   * 
 * *Display* -> Make the Row Size (pixels): to **28**
 * *Appearance* -> Set Alpha: to **0**
