@@ -282,6 +282,8 @@ sudo apt autoclean -y
 
 ## PERSONAL DE SETTINGS IN XFCE
 
+Following are my personal settings for the DE in XFCE.
+
 <br />
 
 - [x] **Appearance**
@@ -357,4 +359,4 @@ mv ~/.debian_setup/UserIcons/debian.svg ~/.icons/flat-Remix-Blue-Dark/apps/scala
 ```
 
 <br />
-:tada:
+:octocat:
