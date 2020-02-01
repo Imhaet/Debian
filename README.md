@@ -35,11 +35,7 @@ sudo apt upgrade
 <br />
 
 - [x] **Install Broadcom Wireless**
-* Add a "contrib" and "non-free" components to your existing repository line in `/etc/apt/sources.list` with nano or other editor. For this we'll first make a copy of the original file, then edit the new file. For example:
-```
-sudo mv /etc/apt/sources.list /etc/apt/sources.list.OLD
-sudo nano /etc/apt/sources.list.OLD
-```
+* Add a "contrib" and "non-free" components to your existing repository line in `/etc/apt/sources.list` using nano, vi or other editor. Below is an example of said file in Debian 10. 
 ```
 # See https://wiki.debian.org/SourcesList for more information.
 deb http://deb.debian.org/debian buster main contrib non-free
@@ -52,7 +48,6 @@ deb http://security.debian.org/debian-security/ buster/updates main
 deb-src http://security.debian.org/debian-security/ buster/updates main
 ```
 * *Note:* Do not add a new line. Just add "contrib non-free" to the end of your existing line.
-* *Ctrl+X* to **exit**, then **save** :floppy_disk: the file as `/etc/apt/sources.list`. (Yes, you are saving it with the original name).
 * Update the list of available packages:
 ```
 sudo apt update
@@ -69,11 +64,7 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 <br />
 
 - [x] **Enable Tapping and Reverse Scrolling (Natural) on Touchpad**
-* Create and edit the config file `/etc/X11/xorg.conf.d/40-libinput.conf` to enable tapping.
-```
-sudo mkdir -p /etc/X11/xorg.conf.d
-sudo nano /etc/X11/xorg.conf.d/40-libinput.conf
-```
+* Create the config file `/etc/X11/xorg.conf.d/40-libinput.conf`. We'll enable **tapping** and **reverse scrolling** by adding the following lines to said file:
 ```
 Section "InputClass"
     Identifier "libinput touchpad catchall"
