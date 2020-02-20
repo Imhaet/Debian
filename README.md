@@ -136,6 +136,13 @@ sudo apt install vlc
 sudo apt install firefox
 ```
 
+- [x] **LaTeX**
+* This will install `texlive-latex-recommended`, `texlive-fonts-recommended`, `texlive-latex-base` and `texlive-base`. 
+```
+sudo apt install texlive
+sudo apt install latexmk
+```
+
 - [x] **Skype for Linux**
 ```
 wget https://go.skype.com/skypeforlinux-64.deb
@@ -241,6 +248,12 @@ sudo dpkg -i atom-amd64.deb
 # Install Atom's dependencies if they are missing
 sudo apt-get -f install
 ```
+
+- [x] **LaTeX for Atom** :link: [atom.io](https://atom.io)
+* To compile latex files from within Atom, use the `latex` [package](https://atom.io/packages/latex). Just enable *Build on Save* and *Enable SyncTeX*.
+* To display the generated PDF in Atom you need `pdf-view` [package](https://atom.io/packages/pdf-view). And make sure that *Auto reload on update* is enabled.
+* For the Syntax highlighting and snippets, use the `language-latex` [package](https://atom.io/packages/language-latex). 
+* ~~For an undistracted writing experience check out Typewriter (https://atom.io/themes/pen-paper-coffee-syntax).~~
 
 ---
 
