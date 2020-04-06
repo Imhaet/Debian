@@ -63,6 +63,16 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/bcm43xx) 
 
 <br />
 
+- [x] **Fixing WiFi Connection Problems After Reboot**
+* If after rebooting the wireless network device can scan, but will not complete connecting, we can try turning off MAC address randomization.
+* Edit `/etc/NetworkManager/NetworkManager.conf` by adding:
+```
+[device]
+wifi.scan-rand-mac-address=no
+```
+
+<br />
+
 - [x] **Enable Tapping and Reverse Scrolling (Natural) on Touchpad**
 * Create the config file `/etc/X11/xorg.conf.d/40-libinput.conf`. We'll enable **tapping** and **reverse scrolling** by adding the following lines to said file:
 ```
@@ -249,11 +259,38 @@ sudo dpkg -i atom-amd64.deb
 sudo apt-get -f install
 ```
 
+<br />
+
 - [x] **LaTeX for Atom** :link: [atom.io](https://atom.io)
 * To compile latex files from within Atom, use the `latex` [package](https://atom.io/packages/latex). Just enable *Build on Save* and *Enable SyncTeX*.
 * To display the generated PDF in Atom you need `pdf-view` [package](https://atom.io/packages/pdf-view). And make sure that *Auto reload on update* is enabled.
 * For the Syntax highlighting and snippets, use the `language-latex` [package](https://atom.io/packages/language-latex). 
 * ~~For an undistracted writing experience check out Typewriter (https://atom.io/themes/pen-paper-coffee-syntax).~~
+
+<br />
+
+- [x] **Zotero**
+* Go to [zotero.org](https://zotero.org/download/) and `Download` the tarball file for Linux 64-bit.
+* Extract the contents of the `Zotero-...x86_64.tar.bz2` tarball and move all the files into a new directory `/opt/zotero`.
+* Run  the `/opt/zotero/set_launcher_icon` script from a terminal with `./set_launcher_icon` to update the .desktop file for that location.
+* Symlink `zotero.desktop` for Zotero to appear in the launcher with `ln -s /opt/zotero/zotero.desktop /usr/share/applications/zotero.desktop`.
+* Edit said file to point to the correct script:
+```
+sudo nano /usr/share/applications/zotero.desktop
+```
+* Edit a few lines to the following and save :floppy_disk: :
+```
+[Desktop Entry]
+Name=Zotero
+Comment=Open-source Reference Management Tool (Stand Alone)
+Exec=/opt/zotero/zotero
+Icon=/opt/zotero/chrome/icons/default/default256.phg
+Type=Application
+Terminal=false
+Categories=Office;
+MimeType=text/plain
+```
+* After rebooting, the application should run from the menu.
 
 ---
 
