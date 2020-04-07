@@ -101,6 +101,28 @@ sudo alsamixer
 * Set all up Master, PCM, Line-Out and switch from 2ch to 6ch.
 * Search for the **Volume** plug in (PulseAudio Plugin) and add it to the *Panel*, and make sure the **Enable keyboard shortcuts for volume control** is `ON`.
 
+<br />
+
+- [x] **Enable System Sounds**
+* XFCE4 supports freedesktop system sounds, but it is not configured out of the box, therefore:
+```
+sudo apt install libcanberra libcanberra-pulse gnome-session-camberra
+```
+* Add `canberra-gtk-module` to the environment variables:
+```
+sudo nano /etc/environment
+```
+```
+# For the libcanberra-gtk-module to work
+export GTK_MODULES=canberra-gtk-module
+```
+* In *Settings Manager -> Appearance -> Settings* check **Enable event sounds**
+* In *Settings Manager -> Settings Editor -> xsettings/Net/SoundThemeName* from `default` to a sound theme located in `/usr/share/sounds/`
+* Make sure that **System Sounds** in the audio mixer is **turned on** and not **0**.
+
+This process is based on the information from [ArchLinux Wiki](https://wiki.archlinux.org/index.php/Xfce#Sound_themes) webpage and [this](https://forum.xfce.org/viewtopic.php?id=8618) forum thread.
+* *Note: The sound-theme-freedesktop that comes preinstalled provides a compatible sound theme, but it lacks many required events. A better choice is [sound-theme-smooth](https://aur.archlinux.org/packages/sound-theme-smooth/) (SoundThemeName should be "Smooth").*
+
 ---
 
 <br />
