@@ -291,7 +291,21 @@ sudo apt-get -f install
 
 <br />
 
-- [x] **Zotero**
+- [x] **Jupyter Notebook** :link: [Jupyter](https://jupyter.readthedocs.io/en/latest/index.html)
+* First make sure you have [pip](https://jupyter.readthedocs.io/en/latest/glossary.html#term-pip) for Python installed. If not, just run `sudo apt install python3-pip` and then run the command `pip3 -V` to verify the installation.
+* Then install the Jupyter Notebook using:
+```
+pip3 install jupyter
+```
+* Congratulations, you have installed Jupyter Notebook. To run the notebook:
+```
+jupyter notebook
+```
+* If you receive an error message such as `bash: jupyter: command not found` then it is possible that `~/.local/bin` is not on your path. Fix this by running `export PATH=$PATH:~/.local/bin` for your current session, then either log out and in or run `source ~/.bashrc`, then run `jupyter notebook` and it should open in your browser.
+
+<br />
+
+- [x] **Zotero** :link: [zotero.org](https://zotero.org/download/)
 * Go to [zotero.org](https://zotero.org/download/) and `Download` the tarball file for Linux 64-bit.
 * Extract the contents of the `Zotero-...x86_64.tar.bz2` tarball and move all the files into a new directory `/opt/zotero`.
 * Run  the `/opt/zotero/set_launcher_icon` script from a terminal with `./set_launcher_icon` to update the .desktop file for that location.
