@@ -291,7 +291,7 @@ sudo apt-get -f install
 
 <br />
 
-- [x] **Jupyter Notebook** :link: [Jupyter](https://jupyter.readthedocs.io/en/latest/index.html)
+- [x] **Jupyter Notebook** :link: [jupyter](https://jupyter.readthedocs.io/en/latest/index.html)
 * First make sure you have [pip](https://jupyter.readthedocs.io/en/latest/glossary.html#term-pip) for Python installed. If not, just run `sudo apt install python3-pip` and then run the command `pip3 -V` to verify the installation.
 * Then install the Jupyter Notebook using:
 ```
