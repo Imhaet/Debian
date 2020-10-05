@@ -1,6 +1,7 @@
 ## FIRST THING FIRST
 
 This installation list is based on my preferences while trying out Debian 10 (Buster) Xfce :mouse: on my - quite old - macbook and is not a definitive procedure. Feel free to use at your own peril.
+* *Note: As of mid 2020 it looks that KDE's performance is better than XFCE in certain circumstances, if this trend continues, it may be better to change to KDE as the new lightweight desktop enfironment for old computers.*
 
 <br />
 
