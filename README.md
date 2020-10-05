@@ -144,7 +144,7 @@ autorandr --save laptop
 ```
 autorandr --save dual
 ```
-* *Note: You may want to **uncheck** Configure new displays when connected
+* *Note: You may want to deselect the 'Configure new displays when connected' option.
 
 ---
 
