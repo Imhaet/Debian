@@ -123,6 +123,29 @@ export GTK_MODULES=canberra-gtk-module
 This process is based on the information from [ArchLinux Wiki](https://wiki.archlinux.org/index.php/Xfce#Sound_themes) webpage and [this](https://forum.xfce.org/viewtopic.php?id=8618) forum thread.
 * *Note: The sound-theme-freedesktop that comes preinstalled provides a compatible sound theme, but it lacks many required events. A better choice is [sound-theme-smooth](https://aur.archlinux.org/packages/sound-theme-smooth/) (SoundThemeName should be "Smooth").*
 
+<br />
+
+- [x] **Dual Displays**
+While XFCE4 is the lightweight linux desktop environments, it is not the friendliest when using multiple displays. This comes from the fact that XFCE treats the display arrangement as one big workspace. So, to simplify things, XFCE prefers to arrenge the 2nd monitor to the right of the primary display, which may not be the configuration that you prefer (I have my Laptop usually on the right).
+
+Now XFCE4 display settings allows to reconfigure the screen possitions, resolution, primary display, etc.; but is not does save said configuration, so when you disconect and reconnect the external monitor(s) you have to set it all up again.
+
+There are a few solutions out there, but because I am using Nvidia drivers for my laptop, the easiest one I've found is to use [autorandr](https://github.com/phillipberndt/autorandr).
+
+* Install autorandr from the Debian repository before connecting any external monitor(s).
+```
+sudo apt-get install autorandr
+```
+* Save the current display configuration.
+```
+autorandr --save laptop
+```
+* Connect the external monitor, open the `xfce4-display-settings` and configure your setup. (i.e., HP 23", Resolution - 1600x900, 60.0Hz, Rotation - Left, position (0,0)).
+```
+autorandr --save dual
+```
+* *Note: You may want to **uncheck** Configure new displays when connected
+
 ---
 
 <br />
@@ -424,6 +447,7 @@ Following are my personal settings for the DE in XFCE.
     * *Appearance* -> Maximum icon size (px): **22**
     * *Appearance* -> **Uncheck** Show frame
   * **Clock**
+* *Display* -> Output: **Primary**
 * *Display* -> Make the Row Size (pixels): to **28**
 * *Appearance* -> Set Alpha: to **0**
 * **Move** Panel 1 to the bottom
