@@ -142,7 +142,7 @@ sudo apt-get install autorandr
 ```
 autorandr --save laptop
 ```
-* Connect the external monitor, open the `xfce4-display-settings` and configure your setup. (i.e., HP 23", Resolution - 1600x900, 60.0Hz, Rotation - Left, position (0,0)).
+* Connect the external monitor, open the `xfce4-display-settings` and configure your setup. (i.e., HP 23", Resolution - 1600x900, 59.8Hz, Rotation - Left or None, position (0,0)).
 ```
 autorandr --save dual
 ```
