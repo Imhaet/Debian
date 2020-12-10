@@ -126,7 +126,7 @@ This process is based on the information from [ArchLinux Wiki](https://wiki.arch
 
 <br />
 
-- [x] **Dual Displays**
+- [x] **Dual Displays** :desktop_computer:
 
 While XFCE4 is the lightweight linux desktop environments, it is not the friendliest when using multiple displays. This comes from the fact that XFCE treats the display arrangement as one big workspace. So, to simplify things, XFCE prefers to arrenge the 2nd monitor to the right of the primary display, which may not be the configuration that you prefer (I have my Laptop usually on the right).
 
