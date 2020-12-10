@@ -139,6 +139,8 @@ First, we know
         Kernel driver in use: nouveau
         Kernel modules: nouveau
 
+The 'nvidia-detect' script can also be used to identify the GPU and the recommended driver package to install:
+
 ~$ sudo apt install nvidia-detect
 
 ~$ nvidia-detect
@@ -150,6 +152,33 @@ Your card is only supported upo to the 340 legacy drivers series.
 It is recommenmded to install the
     nvidia-legacy-340xx-driver
 package.
+
+Before installing new drivers, you must obtain the proper kernel headers for the drivers to build with.
+
+~$ sudo apt install linux-headers-amd64
+
+Update the list of available packages. Install the NVIDIA driver package:
+
+~$ sudo apt update
+~$ sudo apt install nvidia-legacy-340xx-driver
+
+A warning message may appear while running the Package Configuration
+'Conflicting nouveau kernel moduoe loaded
+The free nouveau kernel moduoe is currently ooaded and conflicts with the non-free nvidia kernel module.
+The easisest way to fix this is to reboot the machine once the installation has finished.
+<Ok>
+
+As the NV
+Install the 'nvidia-config' package, then run it with 'sudo'. 
+it will automatically generate a Xorg configuration file at '/etc/X11/xorg.conf'.
+
+~$ 
+
+Reboot your system with
+
+~$ systemctl reboot
+
+
 ```
 
 Now XFCE4 display settings allows to reconfigure the screen possitions, resolution, primary display, etc.; but it not does save said configuration, so when you disconect and reconnect the external monitor(s) you have to set it all up again.
