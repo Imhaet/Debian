@@ -130,31 +130,9 @@ This process is based on the information from [ArchLinux Wiki](https://wiki.arch
 
 While XFCE4 is the lightweight linux desktop environments, it is not the friendliest when using multiple displays. This comes from the fact that XFCE treats the display arrangement as one big workspace. So, to simplify things, XFCE prefers to arrenge the 2nd monitor to the right of the primary display, which may not be the configuration that you prefer (I have my Laptop usually on the right).
 
-```
-First, we know 
-
-~$ lspci -k | grep -EA3 "3D|Display|VGA"
-02:00.0 VGA compatible controler: NVIDIA Corporation C79 [GeForce 9400M] (rev b1)
-        Subsystem: Apple Inc. MacBook5,1
-        Kernel driver in use: nouveau
-        Kernel modules: nouveau
-
-~$ sudo apt install nvidia-detect
-
-~$ nvidia-detect
-Detected NVIDIA GPUs:
-02:00.0 VGA compatible controller [0300]: NVIDIA Corporation C79 [GeForce 9400M] [10de:0863] (rev b1)
-
-Checking card:  NVIDIA Corporation C79 [GeForce 9400M] (rev b1)
-Your card is only supported upo to the 340 legacy drivers series.
-It is recommenmded to install the
-    nvidia-legacy-340xx-driver
-package.
-```
-
 Now XFCE4 display settings allows to reconfigure the screen possitions, resolution, primary display, etc.; but it not does save said configuration, so when you disconect and reconnect the external monitor(s) you have to set it all up again.
 
-There are a few solutions out there, but because I am using Nvidia drivers for my laptop, the easiest one I've found is to use [autorandr](https://github.com/phillipberndt/autorandr).
+There are a few solutions out there, but because the laptop uses Nvidia hardware, the easiest one I've found is to use [autorandr](https://github.com/phillipberndt/autorandr).
 
 * Install autorandr from the Debian repository before connecting any external monitor(s).
 ```
@@ -164,7 +142,7 @@ sudo apt install autorandr
 ```
 autorandr --save laptop
 ```
-* Connect the external monitor, open the `xfce4-display-settings` and configure your setup. (i.e., HP 23", Resolution - 1600x900, 59.8Hz, Rotation - Left or None, position (0,0)).
+* Connect the external monitor, open the `xfce4-display-settings` and configure your setup. (i.e., HP 23", Resolution - 1600x900, 60.0Hz, Rotation - Left or None, position (0,0)).
 ```
 autorandr --save dual
 ```
