@@ -177,6 +177,9 @@ The easisest way to fix this is to reboot the machine once the installation has 
 
 * *Note: You may want to deselect the 'Configure new displays when connected' option.*
 
+```
+So maybe search for ways to fix lightdm?
+```
 ---
 
 <br />
