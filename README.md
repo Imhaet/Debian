@@ -173,15 +173,24 @@ The free nouveau kernel module is currently ooaded and conflicts with the non-fr
 The easisest way to fix this is to reboot the machine once the installation has finished.
 <Ok>
 ```
-* DKMS will build the `nvidia` module for your system, via the `nvidia-legacy-340xx-kernel-dkms` package. After, create an Xorg server configuration file by installing the `nvidia-xconfig` package, then run it with `sudo`. It will automatically generate a Xorg configuration file at `/etc/X11/xorg.conf`.
-
+* DKMS will build the `nvidia` module for your system, via the `nvidia-legacy-340xx-kernel-dkms` package. After, create an Xorg server configuration file by installing the `nvidia-xconfig` package, then run it with `sudo`. It will automatically generate a Xorg configuration file at `/etc/X11/xorg.conf`; Now, you will need to ad a new `ForceFullCompositionPipeline` line to such file to prevent screen tearing. It should looke something like this:
+```
+Section "Screen"
+    Identifier     "Screen0"
+    Device         "Device0"
+    Monitor        "Monitor0"
+    DefaultDepth    24
+    Option "metamodes" "nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+    SubSection     "Display"
+        Depth       24
+    EndSubSection
+EndSection
+```
 * Reboot your system to enable the nouveau blacklist.
 ```
 :$ systemctl reboot
 ```
-* After the system reboots, connect the external monitor, open the `xfce4-display-settings` and configure your setup. (i.e., HP 23", Resolution - 1920x1080, 60.0Hz, Rotation - Left or None, position (0,0)). Make sure to set the `Laptop` display as the Primay display.
-
-* *Note:* You may want to deselect the `Configure new displays when connected` option.
+* After the system reboots, connect the external monitor, open the `xfce4-display-settings` and configure your setup. (i.e., HP 23", Resolution - 1920x1080, 60.0Hz, Rotation - Left or None, position (0,0)). Make sure to set the `Laptop` display as the Primay display. *Note:* You may want to deselect the `Configure new displays when connected` option.
 
 ```
 The effing problem dissapears with the external monitor but stays with the laptop monitor. 
