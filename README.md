@@ -181,11 +181,8 @@ The easisest way to fix this is to reboot the machine once the installation has 
 ```
 * After the system reboots, connect the external monitor, open the `xfce4-display-settings` and configure your setup. (i.e., HP 23", Resolution - 1920x1080, 60.0Hz, Rotation - Left or None, position (0,0)). Make sure to set the `Laptop` display as the Primay display.
 
-* *Note: You may want to deselect the `Configure new displays when connected` option.*
+* *Note:* You may want to deselect the `Configure new displays when connected` option.
 
-```
-So maybe search for ways to fix lightdm. It looks like this has fixed the problem of screentearing (by following exactly these steps) now, I am not sure about when it goes to sleep
-```
 ---
 
 <br />
@@ -437,6 +434,9 @@ Following are my personal settings for the DE in XFCE.
 * *Keyboard* -> `Tile window to the bottom` runs with **Super+Down**
 * *Keyboard* -> `Tile window to the left` runs with **Super+Left**
 * *Keyboard* -> `Tile window to the right` runs with **Super+Right**
+
+- [X] **Window Manager Tweaks**
+* *Compositor* -> Set **Opacity of windows during move:** to **~3/4** Opaque
 
 - [x] **LightDM GTK+ Greeter settings**
 * *Appearance* -> Select **Arc-Dark** for the Theme
