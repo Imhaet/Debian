@@ -199,6 +199,16 @@ the loading screen is brown instead of blue
 disable nvidia splash screen?
 ```
 
+<br />
+
+- [x] **Screen Brightness with NVIDIA drivers**
+
+* After installing the NVIDIA drivers, you won't be able to change the screen brightness. To fix this we need to edit the Xorg configuration file `/etc/X11/xorg.conf`again by adding the following line:
+
+`Option         "RegistryDwords" "EnableBrightnessControl=1;"`
+
+* Reboot again for the changes to take effect.
+
 ---
 
 <br />
