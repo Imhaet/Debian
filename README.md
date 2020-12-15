@@ -183,6 +183,13 @@ The easisest way to fix this is to reboot the machine once the installation has 
 
 * *Note:* You may want to deselect the `Configure new displays when connected` option.
 
+```
+The effing problem dissapears with the external monitor but stays with the laptop monitor. 
+It looks like the sleep thing works though
+the loading screen is brown instead of blue
+disable nvidia splash screen?
+```
+
 ---
 
 <br />
