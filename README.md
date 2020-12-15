@@ -19,6 +19,8 @@ Intel Core2 Duo P7350 @ 2x 1.995Ghz | amd64 EFI | 4GB RAM | NVIDIA GeForce 9400M
 
 UEFI Boot with GUID Partition Table
 
+* From this point on ':$' means instructions in the command line and ':#' means that the instuctions should be run as 'root' or with 'sudo'.
+
 ---
 
 <br />
@@ -29,8 +31,8 @@ UEFI Boot with GUID Partition Table
 
 - [x] **Update OS**
 ```
-sudo apt update
-sudo apt upgrade
+:# apt update
+:# apt upgrade
 ```
 
 <br />
@@ -51,12 +53,12 @@ deb-src http://security.debian.org/debian-security/ buster/updates main
 * *Note:* Do not add a new line. Just add "contrib non-free" to the end of your existing line.
 * Update the list of available packages:
 ```
-sudo apt update
+:# apt update
 ```
 * Install the appropriate firmware installer package:
 For devices with a BCM4306 revision 3, BCM4311, BCM4318, BCM4321 or BCM4322 chip, install firmware-b43-installer:
 ```
-sudo apt install firmware-b43-installer -y
+:# apt install firmware-b43-installer -y
 ```
 * Reboot.
 
@@ -88,7 +90,7 @@ EndSection
 ```
 * Restart the DM:
 ```
-systemctl restart lightdm
+:$ systemctl restart lightdm
 ```
 
 More information can be found in [Debian Wiki](https://wiki.debian.org/SynapticsTouchpad#Enable_tapping_on_touchpad) synaptics touchpad webpage.
@@ -97,7 +99,7 @@ More information can be found in [Debian Wiki](https://wiki.debian.org/Synaptics
 
 - [x] **Sound (For MacBook Aluminum - late 2008)** :speaker:
 ```
-sudo alsamixer
+:# alsamixer
 ```
 * Set all up Master, PCM, Line-Out and switch from 2ch to 6ch.
 * Search for the **Volume** plug in (PulseAudio Plugin) and add it to the *Panel*, and make sure the **Enable keyboard shortcuts for volume control** is `ON`.
@@ -107,11 +109,11 @@ sudo alsamixer
 - [x] **Enable System Sounds**
 * XFCE4 supports freedesktop system sounds, but it is not configured out of the box, therefore:
 ```
-sudo apt install libcanberra libcanberra-pulse gnome-session-camberra
+:# apt install libcanberra libcanberra-pulse gnome-session-camberra
 ```
 * Add `canberra-gtk-module` to the environment variables:
 ```
-sudo nano /etc/environment
+:# nano /etc/environment
 ```
 ```
 # For the libcanberra-gtk-module to work
@@ -145,8 +147,7 @@ While XFCE4 is the lightweight linux desktop environments, it is not the friendl
 ```
 * The `nvidia-detect` script can also be used to identify the GPU and the recommended driver package to install:
 ```
-# apt install nvidia-detect
-
+:# apt install nvidia-detect
 :$ nvidia-detect
 Detected NVIDIA GPUs:
 02:00.0 VGA compatible controller [0300]: NVIDIA Corporation C79 [GeForce 9400M] [10de:0863] (rev b1)
@@ -159,12 +160,11 @@ package.
 ```
 * Before installing new drivers, you must obtain the proper kernel headers for the drivers to build with.
 ```
-# apt install linux-headers-amd64
+:# apt install linux-headers-amd64
 ```
-* Make sure "contrib" and "non-free" components are in /etc/apt/sources.list (review)
 * Update the list of available packages. Install the NVIDIA driver package:
 ```
-# apt install nvidia-legacy-340xx-driver
+:# apt install nvidia-legacy-340xx-driver
 ```
 A warning message may appear while running the Package Configuration:
 ```
@@ -184,7 +184,7 @@ The easisest way to fix this is to reboot the machine once the installation has 
 * *Note: You may want to deselect the 'Configure new displays when connected' option.*
 
 ```
-So maybe search for ways to fix lightdm?
+So maybe search for ways to fix lightdm. It looks like this has fixed the problem of screentearing (by following exactly these steps) now, I am not sure about when it goes to sleep
 ```
 ---
 
@@ -196,15 +196,15 @@ So maybe search for ways to fix lightdm?
 
 - [x] **Enable and Start Firewall**
 ```
-sudo apt install ufw
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-sudo ufw allow ssh
+:# apt install ufw
+:# ufw default deny incoming
+:# ufw default allow outgoing
+:# ufw allow ssh
 ```
 * If more ports need to be open (eg. port 80 for web server), use the comand `sudo ufw allow` and then the *Port ##*. Finally, enable UFW (Uncomplicated FireWall).
 ```
-sudo ufw enable
-sudo ufw status
+:# ufw enable
+:# ufw status
 ```
 
 <br />
@@ -213,35 +213,35 @@ sudo ufw status
 
 - [x] **GParted** 
 ```
-sudo apt install gparted
+:# apt install gparted
 ```
 
 - [x] **GIT**
 ```
-sudo apt install git
+:# apt install git
 ```
 
 - [x] **VLC**
 ```
-sudo apt install vlc
+:# apt install vlc
 ```
 
 - [x] ~~**Firefox**~~
 ```
-sudo apt install firefox
+:# apt install firefox
 ```
 
 - [x] **LaTeX**
 * This will install `texlive-latex-recommended`, `texlive-fonts-recommended`, `texlive-latex-base` and `texlive-base`. 
 ```
-sudo apt install texlive
-sudo apt install latexmk
+:# apt install texlive
+:# apt install latexmk
 ```
 
 - [x] **Skype for Linux**
 ```
-wget https://go.skype.com/skypeforlinux-64.deb
-sudo apt install ./skypeforlinux-64.deb
+:$ wget https://go.skype.com/skypeforlinux-64.deb
+:# apt install ./skypeforlinux-64.deb
 ```
 
 ---
@@ -280,7 +280,7 @@ lightdm-gtk-greeter-settings
 
 * If some of the icon themes show a Xfce icons gtk-update-icon-cache warning, run the following command in the terminal:
 ```
-gtk-update-icon-cache ~/.icons/yourIconsTheme
+:$ gtk-update-icon-cache ~/.icons/yourIconsTheme
 ```
 
 <br />
@@ -288,7 +288,7 @@ gtk-update-icon-cache ~/.icons/yourIconsTheme
 - [x] **Configure Greeter**
 * Create user configuration file for **lightDM**, the greeter that asks for user and credentials, and edit it:
 ```
-sudo nano /usr/share/lightdm/lightdm.conf.d/01_my.conf
+:# nano /usr/share/lightdm/lightdm.conf.d/01_my.conf
 ```
 * Add the following lines to the file and save :floppy_disk: :
 ```
@@ -325,23 +325,23 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 - [x] **Atom** :link: [atom.io](https://atom.io)
 * To install Atom on Debian, Ubuntu, or related distributions, add our official package repository to your system by running the following commands:
 ```
-wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
-sudo apt-get update
+:$ wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
+:# sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+:# apt update
 ```
 * You can now install Atom using apt-get (or apt on Ubuntu):
 ```
 # Install Atom
-sudo apt-get install atom
+:# apt install atom
 # Install Atom Beta
-sudo apt-get install atom-beta
+:# apt install atom-beta
 ```
 * Alternatively, you can download the Atom .deb package and install it directly:
 ```
 # Install Atom
-sudo dpkg -i atom-amd64.deb
+:# dpkg -i atom-amd64.deb
 # Install Atom's dependencies if they are missing
-sudo apt-get -f install
+:# apt -f install
 ```
 
 <br />
@@ -355,7 +355,7 @@ sudo apt-get -f install
 <br />
 
 - [x] **Jupyter Notebook** :link: [jupyter](https://jupyter.readthedocs.io/en/latest/index.html)
-* First make sure you have [pip](https://jupyter.readthedocs.io/en/latest/glossary.html#term-pip) for Python installed. If not, just run `sudo apt install python3-pip` and then run the command `pip3 -V` to verify the installation.
+* First make sure you have [pip](https://jupyter.readthedocs.io/en/latest/glossary.html#term-pip) for Python installed. If not, just run `:# apt install python3-pip` and then run the command `pip3 -V` to verify the installation.
 * Then install the Jupyter Notebook using:
 ```
 pip3 install jupyter
@@ -375,7 +375,7 @@ jupyter notebook
 * Symlink `zotero.desktop` for Zotero to appear in the launcher with `ln -s /opt/zotero/zotero.desktop /usr/share/applications/zotero.desktop`.
 * Edit said file to point to the correct script:
 ```
-sudo nano /usr/share/applications/zotero.desktop
+:# nano /usr/share/applications/zotero.desktop
 ```
 * Edit a few lines to the following and save :floppy_disk: :
 ```
@@ -405,8 +405,8 @@ MimeType=text/plain
 - [x] **Clean Up OS**
 * After uninstalling, make sure there are no dependencies left by running the following commands:
 ```
-sudo apt autoremove -y
-sudo apt autoclean -y
+:# apt autoremove -y
+:# apt autoclean -y
 ```
 
 <br />
