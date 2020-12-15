@@ -198,7 +198,7 @@ The easisest way to fix this is to reboot the machine once the installation has 
 :# ufw default allow outgoing
 :# ufw allow ssh
 ```
-* If more ports need to be open (eg. port 80 for web server), use the comand `sudo ufw allow` and then the *Port ##*. Finally, enable UFW (Uncomplicated FireWall).
+* If more ports need to be open (eg. port 80 for web server), use the comand `:# ufw allow` and then the *Port ##*. Finally, enable UFW (Uncomplicated FireWall).
 ```
 :# ufw enable
 :# ufw status
@@ -271,7 +271,7 @@ lightdm-gtk-greeter-settings
 * The basic details of the procedure are:
 1. Download the archive.
 2. Extract it with the right click of your mouse.
-3. Create the **.icons** and **.themes** folders in your home directory. The fastest way to do that is by running in the terminal: `mkdir ~/.icons ~/.themes`.
+3. Create the **.icons** and **.themes** folders in your home directory. The fastest way to do that is by running in the terminal: `:$ mkdir ~/.icons ~/.themes`.
 4. Move the extracted theme folders to the ~/.theme folder and the extracted icons to the ~/.icons folder. You can make the .theme and .icons folders visible by pressing Ctrl+H or in the menu of your file manager *View -> Show Hidden Files*.
 * More detailed information about Themes and Icons can be found [here](https://averagelinuxuser.com/xfce-look-modern-and-beautiful/).
 
