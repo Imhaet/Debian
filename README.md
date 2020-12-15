@@ -132,7 +132,12 @@ While XFCE4 is the lightweight linux desktop environments, it is not the friendl
 
 * The NVIDIA graphics processing unit (GPU) series/codename of an installed video card can usually be identified using the `lspci` command.
 ```
-~$ lspci -k | grep -EA3 "3D|Display|VGA"
+:$ lspci -nn | egrep -i "3D|Display|VGA"
+02:00.0 VGA COMPATIBLE CONTROLLER [0300]: NVIDIA Corporation C79 [GeForce 9400M] [10de:0863] (rev b1)
+```
+* Or to see which drivers are in use:
+```
+:$ lspci -k | grep -EA3 "3D|Display|VGA"
 02:00.0 VGA compatible controler: NVIDIA Corporation C79 [GeForce 9400M] (rev b1)
         Subsystem: Apple Inc. MacBook5,1
         Kernel driver in use: nouveau
@@ -140,10 +145,9 @@ While XFCE4 is the lightweight linux desktop environments, it is not the friendl
 ```
 * The `nvidia-detect` script can also be used to identify the GPU and the recommended driver package to install:
 ```
-sudo apt install nvidia-detect
-```
-```
-~$ nvidia-detect
+# apt install nvidia-detect
+
+:$ nvidia-detect
 Detected NVIDIA GPUs:
 02:00.0 VGA compatible controller [0300]: NVIDIA Corporation C79 [GeForce 9400M] [10de:0863] (rev b1)
 
@@ -155,23 +159,25 @@ package.
 ```
 * Before installing new drivers, you must obtain the proper kernel headers for the drivers to build with.
 ```
-sudo apt install linux-headers-amd64
+# apt install linux-headers-amd64
 ```
+* Make sure "contrib" and "non-free" components are in /etc/apt/sources.list (review)
 * Update the list of available packages. Install the NVIDIA driver package:
 ```
-sudo apt update
-sudo apt install nvidia-legacy-340xx-driver
+# apt install nvidia-legacy-340xx-driver
 ```
-A warning message may appear while running the Package Configuration
+A warning message may appear while running the Package Configuration:
 ```
 Conflicting nouveau kernel moduoe loaded
 The free nouveau kernel module is currently ooaded and conflicts with the non-free nvidia kernel module.
 The easisest way to fix this is to reboot the machine once the installation has finished.
 <Ok>
 ```
-* Reboot your system with
+* DKMS will build the `nvidia` module for your system, via the `nvidia-legacy-340xx-kernel-dkms` package. After, create an Xorg server configuration file by installing the `nvidia-xconfig` package, then run it with `sudo`. It will automatically generate a Xorg configuration file at `/etc/X11/xorg.conf`.
+
+* Reboot your system to enable the nouveau blacklist.
 ```
-~$ systemctl reboot
+:$ systemctl reboot
 ```
 * After the system reboots, connect the external monitor, open the `xfce4-display-settings` and configure your setup. (i.e., HP 23", Resolution - 1920x1080, 60.0Hz, Rotation - Left or None, position (0,0)). Make sure to set the `Laptop` display as the Primay display.
 
