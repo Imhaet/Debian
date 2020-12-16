@@ -130,7 +130,7 @@ This process is based on the information from [ArchLinux Wiki](https://wiki.arch
 
 - [x] **Dual Displays** :desktop_computer:
 
-While XFCE4 is the lightweight linux desktop environments, it is not the friendliest when using multiple displays. This comes from the fact that XFCE treats the display arrangement as one big workspace. So, to simplify things, XFCE prefers to arrenge the 2nd monitor to the right of the primary display, which may not be the configuration that you prefer (I have my Laptop usually on the right). Also, the out-of-the-box `nouveau` drivers limits the max resolution of the external monitor if connected through VGA, thus we may want to change the Graphic Card drivers to the propietary `NVIDIA` ones.
+While XFCE4 is the lightweight linux desktop environments, it is not the friendliest when using multiple displays. This comes from the fact that XFCE treats the display arrangement as one big workspace. So, to simplify things, XFCE prefers to arrenge the 2nd monitor to the right of the primary display, which may not be the configuration that you prefer (I have my Laptop usually on the right). Also, the out-of-the-box `nouveau` drivers limits the max resolution of the external monitor if connected through VGA, thus we may want to change the Graphic Card drivers to the propietary `NVIDIA` ones. Most of this process is based on the information from the [Nvidia Graphics Drivers Wiki](https://wiki.debian.org/NvidiaGraphicsDrivers).
 
 * The NVIDIA graphics processing unit (GPU) series/codename of an installed video card can usually be identified using the `lspci` command.
 ```
@@ -173,27 +173,34 @@ The free nouveau kernel module is currently ooaded and conflicts with the non-fr
 The easisest way to fix this is to reboot the machine once the installation has finished.
 <Ok>
 ```
-* DKMS will build the `nvidia` module for your system, via the `nvidia-legacy-340xx-kernel-dkms` package. After, create an Xorg server configuration file by installing the `nvidia-xconfig` package, then run it with `sudo`. It will automatically generate a Xorg configuration file at `/etc/X11/xorg.conf`; Now, you will need to ad a new `ForceFullCompositionPipeline` line to such file to prevent screen tearing. It should looke something like this:
+* DKMS will build the `nvidia` module for your system, via the `nvidia-legacy-340xx-kernel-dkms` package. After, create an Xorg server configuration file by installing the `nvidia-xconfig` package. Then run it with `sudo`, It will automatically generate a Xorg configuration file at `/etc/X11/xorg.conf`.
+
+For some reason, when running Debian (or some other Debian based distros like Ubuntu, ElementaryOS, etc.) with the `nvidia-340xx-driver`, this particular machine and old Macs with similar characteristics, experience an intermitent -and anoying- glitch/flickering at the bottom of the screen around 20px high, which is not present when using the open-source nouveau drivers (*Note:* It is quite curious that said glitch disapears when an external monitor is connected to the laptop).
+
+In any case, there is only one solution that I've found works reasonably well. It requires editing the `xorg.conf` file that was just generated. We'll add a new `viewportout=1278x798+1+0` line under the `Screen` section of the file. This forces the Nvidia driver to switch into a meta-mode of 1278x798 instead of the 1280x800 the screen actually has (it basically eliminates 2 lines of pixels from your screen somehow eliminating the glitch).
+
+* Edit the `/etc/X11/xorg.conf` file with `sudo`, add the "metamodes" option line and save. It should looke something like this:
 ```
 Section "Screen"
     Identifier     "Screen0"
     Device         "Device0"
     Monitor        "Monitor0"
     DefaultDepth    24
-    Option "metamodes" "nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+    Option "metamodes" "nvidia-auto-select +0+0 { viewportout=1278x798+1+0 }"
     SubSection     "Display"
         Depth       24
     EndSubSection
 EndSection
 ```
-* Reboot your system to enable the nouveau blacklist.
+* Reboot your system to enable the nouveau blacklist as well as the changes on the Xorg configuration file.
 ```
 :$ systemctl reboot
 ```
 * After the system reboots, connect the external monitor, open the `xfce4-display-settings` and configure your setup. (i.e., HP 23", Resolution - 1920x1080, 60.0Hz, Rotation - Left or None, position (0,0)). Make sure to set the `Laptop` display as the Primay display. *Note:* You may want to deselect the `Configure new displays when connected` option.
 
+**Important:** After some trial and error it appears that the best practice regarding switching between the laptop and the dual monitor is to connect all the cables before turning on the machine, this way all the settings are preserved. It is still possible to connect/disconnect the display, but you may need to reconfigure all your external monitor settings and position.
+
 ```
-The effing problem dissapears with the external monitor but stays with the laptop monitor. 
 It looks like the sleep thing works though
 the loading screen is brown instead of blue
 disable nvidia splash screen?
@@ -203,7 +210,7 @@ disable nvidia splash screen?
 
 - [x] **Screen Brightness with NVIDIA drivers**
 
-* After installing the NVIDIA drivers, you won't be able to change the screen brightness. To fix this we need to edit the Xorg configuration file `/etc/X11/xorg.conf`again by adding the following line:
+* After installing the NVIDIA drivers, you won't be able to change the screen brightness. To fix this we need to edit the Xorg configuration file `/etc/X11/xorg.conf` again by adding the following line under the `Screen` section:
 
 `Option         "RegistryDwords" "EnableBrightnessControl=1;"`
 
