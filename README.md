@@ -482,7 +482,7 @@ Following are my personal settings for the DE in XFCE.
 - [x] **Workspaces**
 * *General* -> Number of wokspaces: **3**
 
-- [x] **Terminal Preferences**
+- [x] **XFCE Terminal Preferences**
 * *Drop-down* -> Set Height to **70 %**
 * *Appearance* -> Set **Transparent background** to **0.70** Opacity
 * *Appearance* -> **Uncheck** Display menubar in new windows
@@ -493,6 +493,14 @@ Following are my personal settings for the DE in XFCE.
 * *Icons* -> **Uncheck** Home on the Default Icons
 * *Icons* -> **Uncheck** Filesystem on the Default Icons
 * *Icons* -> **Uncheck** Trash on the Default Icons
+
+- [X] **Power Manager**
+* *Display | Blank after* -> **5 minutes** On battery
+* *Display | Blank after* -> **30 minutes** Plugged in
+* *Display | Put to sleep after* -> **10 minutes** On battery
+* *Display | Put to sleep after* -> **45 minutes** Plugged in
+* *Display | Switch off after* -> **20 minutes** On battery
+* *Display | Switch off after* -> **Never** Plugged in
 
 - [x] **Panel**
 * **Detailed List View** the 2nd Panel
