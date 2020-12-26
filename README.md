@@ -133,6 +133,16 @@ This process is based on the information from [ArchLinux Wiki](https://wiki.arch
 This is not proven
 :# apt install bluez blueman
 From here, it should instal a bluetooth manager to pair a blouetooth device
+
+LOL, it did not, so i ran
+:$ hcidev
+to prove it was installed
+
+then
+:$ hciscan
+to find out the bluetooth device i wanted to pair
+ and somehow it works now... need to redo this
+ 
 ```
 
 - [x] **Dual Displays** :desktop_computer:
