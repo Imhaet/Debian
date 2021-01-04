@@ -505,6 +505,7 @@ Following are my personal settings for the DE in XFCE.
 * *Drop-down* -> Set Height to **70 %**
 * *Appearance* -> Set **Transparent background** to **0.70** Opacity
 * *Appearance* -> **Uncheck** Display menubar in new windows
+* *Appearance* -> Set **Default geometry:** to **120** columns **40** rows
 
 - [x] **Desktop**
 * *Background* -> **Uncheck** Apply to all workspaces
