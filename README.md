@@ -224,6 +224,15 @@ It looks like the sleep thing works though
 the loading screen is brown instead of blue
 disable nvidia splash screen?
 ```
+```
+Ok, so the external monitor I am using for the Dual setting has some colour problems. ATM, the best settings I have are the following:
+going into 'nvidia-settings' (probably with sudo), go to DFP-2 color correction and:
+RED   -> Brightness: -0.35; Gamma: 1.3
+GREEN -> Brightness: -0.25; Gamma: 1.15
+BLUE  -> Brightness:  0.15; Gamma: 0.8
+
+
+```
 
 <br />
 
