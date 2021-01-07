@@ -231,7 +231,7 @@ RED   -> Brightness: -0.35; Gamma: 1.3
 GREEN -> Brightness: -0.25; Gamma: 1.15
 BLUE  -> Brightness:  0.15; Gamma: 0.8
 
-
+this changes will affect the /root/.nvidia-settings-rc
 ```
 
 <br />
