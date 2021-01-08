@@ -141,11 +141,13 @@ to prove it was installed
 then
 :$ hciscan
 to find out the bluetooth device i wanted to pair
- and somehow it works now... need to redo this
- 
+and somehow it works now... need to redo this
 ```
 
+<br />
+
 - [x] **Dual Displays** :desktop_computer:
+
 *If you are not using dual displays, it may just be easier to stick with the open-source `nouveau` drivers.*
 
 While XFCE4 is the lightweight linux desktop environments, it is not the friendliest when using multiple displays. This comes from the fact that XFCE treats the display arrangement as one big workspace. So, to simplify things, XFCE prefers to arrenge the 2nd monitor to the right of the primary display, which may not be the configuration that you prefer (I have my Laptop usually on the right). Also, the out-of-the-box `nouveau` drivers limits the max resolution of the external monitor if connected through VGA, thus we may want to change the Graphic Card drivers to the propietary `NVIDIA` ones. Most of this process is based on the information from the [Nvidia Graphics Drivers Wiki](https://wiki.debian.org/NvidiaGraphicsDrivers).
