@@ -225,13 +225,24 @@ the loading screen is brown instead of blue
 disable nvidia splash screen?
 ```
 ```
-Ok, so the external monitor I am using for the Dual setting has some colour problems. ATM, the best settings I have are the following:
-going into 'nvidia-settings' (probably with sudo), go to DFP-2 color correction and:
-RED   -> Brightness: -0.35; Gamma: 1.3
-GREEN -> Brightness: -0.25; Gamma: 1.15
-BLUE  -> Brightness:  0.15; Gamma: 0.8
+Ok, so the external monitor I am using for the Dual setting has some colour problems.
+X resets nvidia's color corrections for root every time it reboots on the premise that different users
+will have different settings (i read this somewhere).
 
-this changes will affect the /root/.nvidia-settings-rc
+ATM, the best settings I have are the following:
+going into 'nvidia-settings' (not with sudo because of what was said on the previous paragraph),
+go to DFP-2 color correction and set:
+RED   -> Brightness: -0.3; Gamma: 1.3
+GREEN -> Brightness: -0.2; Gamma: 1.15
+BLUE  -> Brightness:  0.2; Gamma: 0.8
+
+this changes should be recorded on the ~/.nvidia-settings-rc file.
+
+After turning on the computer with the dual monitor, you can run:
+'nvidia-settings --load-config-only' or just 'nvidia-settings -l'
+and the color correction settins for the external monitor should apply.
+
+you could add this command into the init. scripts to run on the startup
 ```
 
 <br />
