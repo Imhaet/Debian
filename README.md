@@ -227,6 +227,7 @@ disable nvidia splash screen?
 <br />
 
 - [X] **External Monitor color correction with NVIDIA drivers**
+
 The external monitor that I am using for the Dual setting has some color problems. The NVIDIA X driver dows not preserve the values set with nvidia-settings between runs of the Xserver (or even between logging in and logging out of X). This is intentional, because different users may have different preferences, thus these settings are stored on a per user basis in a configuration file stored in the user's home directory.
 
 * Open `nvidia-settings`, go to *GPU 0 - (GeForce 9400M) -> DFP-2 (HP ZZ3i) -> Color Correction* and change the **Brighness** and **Gamma** for each individual Active Color Channel. The following values are the best that I have at the moment:
