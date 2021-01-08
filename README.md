@@ -128,7 +128,7 @@ This process is based on the information from [ArchLinux Wiki](https://wiki.arch
 
 <br />
 
-- [X] **Bluetooth** *emoji*
+- [X] **Bluetooth** :large_blue_diamond:
 ```
 This is not proven
 :# apt install bluez blueman
@@ -146,7 +146,6 @@ to find out the bluetooth device i wanted to pair
 ```
 
 - [x] **Dual Displays** :desktop_computer:
-
 *If you are not using dual displays, it may just be easier to stick with the open-source `nouveau` drivers.*
 
 While XFCE4 is the lightweight linux desktop environments, it is not the friendliest when using multiple displays. This comes from the fact that XFCE treats the display arrangement as one big workspace. So, to simplify things, XFCE prefers to arrenge the 2nd monitor to the right of the primary display, which may not be the configuration that you prefer (I have my Laptop usually on the right). Also, the out-of-the-box `nouveau` drivers limits the max resolution of the external monitor if connected through VGA, thus we may want to change the Graphic Card drivers to the propietary `NVIDIA` ones. Most of this process is based on the information from the [Nvidia Graphics Drivers Wiki](https://wiki.debian.org/NvidiaGraphicsDrivers).
@@ -224,31 +223,33 @@ It looks like the sleep thing works though
 the loading screen is brown instead of blue
 disable nvidia splash screen?
 ```
+
+<br />
+
+- [X] **External Monitor color correction with NVIDIA drivers**
+The external monitor that I am using for the Dual setting has some color problems. The NVIDIA X driver dows not preserve the values set with nvidia-settings between runs of the Xserver (or even between logging in and logging out of X). This is intentional, because different users may have different preferences, thus these settings are stored on a per user basis in a configuration file stored in the user's home directory.
+
+* Open `nvidia-settings`, go to *GPU 0 - (GeForce 9400M) -> DFP-2 (HP ZZ3i) -> Color Correction* and change the **Brighness** and **Gamma** for each individual Active Color Channel. The following values are the best that I have at the moment:
 ```
-Ok, so the external monitor I am using for the Dual setting has some colour problems.
-X resets nvidia's color corrections for root every time it reboots on the premise that different users
-will have different settings (i read this somewhere).
-
-ATM, the best settings I have are the following:
-going into 'nvidia-settings' (not with sudo because of what was said on the previous paragraph),
-go to DFP-2 color correction and set:
-RED   -> Brightness: -0.3; Gamma: 1.3
-GREEN -> Brightness: -0.2; Gamma: 1.15
-BLUE  -> Brightness:  0.2; Gamma: 0.8
-
-this changes should be recorded on the ~/.nvidia-settings-rc file.
-
-After turning on the computer with the dual monitor, you can run:
-'nvidia-settings --load-config-only' or just 'nvidia-settings -l'
-and the color correction settins for the external monitor should apply.
-
-you could add this command into the init. scripts to run on the startup
+...
+[DPY:DP-1]/RedBrightness=   -0.300000
+[DPY:DP-1]/GreenBrightness= -0.200000
+[DPY:DP-1]/BlueBrightness=   0.200000
+[DPY:DP-1]/RedContrast=   0.000000
+[DPY:DP-1]/GreenContrast= 0.000000
+[DPY:DP-1]/BlueContrast=  0.000000
+[DPY:DP-1]/RedGamma=   1.300000
+[DPY:DP-1]/GreenGamma= 1.150000
+[DPY:DP-1]/BlueGamma=  0.800000
+...
 ```
+* Quiting should create and record all this values on the `~/.nvidia-settings-rc` file. If it didn't, go into the `nvidia-settings` again, repeat the procedure and then go to to *nvidia-settings Configuration* and press the **Save Current Configuration** button.
+
+* From now on, every time you turn on the computer with the dual monitor connected, you can run `nvidia-settings --load-config-only` or just `nvidia-settings-l` and the color correction settings for the external monitor should apply. You could create a script to run this command at the start of the computer.
 
 <br />
 
 - [x] **Screen Brightness with NVIDIA drivers**
-
 * After installing the NVIDIA drivers, you won't be able to change the screen brightness. To fix this we need to edit the Xorg configuration file `/etc/X11/xorg.conf` again by adding the following line under the `Screen` section:
 
 `Option         "RegistryDwords" "EnableBrightnessControl=1;"`
