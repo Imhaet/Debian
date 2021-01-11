@@ -238,17 +238,17 @@ The external monitor that I am using for the Dual setting has some color problem
 [DPY:DP-1]/RedBrightness=   -0.300000
 [DPY:DP-1]/GreenBrightness= -0.200000
 [DPY:DP-1]/BlueBrightness=   0.200000
-[DPY:DP-1]/RedContrast=   0.000000
-[DPY:DP-1]/GreenContrast= 0.000000
-[DPY:DP-1]/BlueContrast=  0.000000
-[DPY:DP-1]/RedGamma=   1.300000
-[DPY:DP-1]/GreenGamma= 1.150000
-[DPY:DP-1]/BlueGamma=  0.800000
+[DPY:DP-1]/RedContrast=      0.000000
+[DPY:DP-1]/GreenContrast=    0.000000
+[DPY:DP-1]/BlueContrast=     0.000000
+[DPY:DP-1]/RedGamma=         1.300000
+[DPY:DP-1]/GreenGamma=       1.150000
+[DPY:DP-1]/BlueGamma=        0.800000
 ...
 ```
 * Quiting should create and record all this values on the `~/.nvidia-settings-rc` file. If it didn't, go into the `nvidia-settings` again, repeat the procedure and then go to to *nvidia-settings Configuration* and press the **Save Current Configuration** button.
 
-* From now on, every time you turn on the computer with the dual monitor connected, you can run `nvidia-settings --load-config-only` or just `nvidia-settings-l` and the color correction settings for the external monitor should apply. You could create a script to run this command at the start of the computer.
+* From now on, every time you turn on the computer with the dual monitor connected, you can run `nvidia-settings --load-config-only` or just `nvidia-settings -l` and the color correction settings for the external monitor should apply. You could create a script to run this command at the start of the computer.
 
 <br />
 
