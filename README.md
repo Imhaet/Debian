@@ -425,6 +425,13 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 * For the Syntax highlighting and snippets, use the `language-latex` [package](https://atom.io/packages/language-latex). 
 * ~~For an undistracted writing experience check out Typewriter (https://atom.io/themes/pen-paper-coffee-syntax).~~
 
+```
+OK, I need to review LaTeX installation
+* To install further .cls or .sty packages
+:$ tlmgr init-usertree
+:$ tlmgr install <userpackage>
+```
+
 <br />
 
 - [x] **Jupyter Notebook** :link: [jupyter](https://jupyter.readthedocs.io/en/latest/index.html)
