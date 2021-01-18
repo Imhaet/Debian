@@ -310,6 +310,7 @@ The external monitor that I am using for the Dual setting has some color problem
 :# apt install texlive
 :# apt install latexmk
 ```
+* To install a new package, you can run `tlmgr install <package>`. If an error appears similar to `tlmgr: Remote repository is newer than local (2017 < 2018)`   you can try installing the package using `apt` or by doing a full installation with `:# apt install texlive-full`. For more information, see [Installing Extra Packages for Tex Live]( https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages).
 
 - [x] **Skype for Linux**
 ```
