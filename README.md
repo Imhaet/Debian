@@ -416,24 +416,18 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 ```
 * Some packages to consider installing would be [atom-updater-linux](https://atom.io/packages/atom-updater-linux) to keep Atom updated, and [minimap](https://atom.io/packages/minimap) to have a preview of the full source code.
 
-
 <br />
 
 - [x] **LaTeX for Atom** :link: [atom.io](https://atom.io)
-* To compile latex files from within Atom, install the `latex` [package](https://atom.io/packages/latex). Just enable *Build on Save* and *Enable SyncTeX*.
-* To display the generated PDF in Atom you need `pdf-view` [package](https://atom.io/packages/pdf-view). Then make sure that *Auto reload on update* is enabled.
-* For the Syntax highlighting and snippets, install the `language-latex` [package](https://atom.io/packages/language-latex).
-* For LaTeX function autocompletion, install the `latex-autocomplete` [package](https://atom.io/packages/latex-autocomplete).
-* To complete keys that have been used in `\label{}` and the `.bib` file, install the `autocomplete-latex-references` [package](https://atom.io/packages/autocomplete-latex-references).
-* To show a document tree view for LaTeX, install the `latex tree` [package](https://atom.io/packages/latex-tree). Then go *Packages -> Latex Tree -> Toggle Tree View* to activate.
-* ~~For an undistracted writing experience check out Typewriter (https://atom.io/themes/pen-paper-coffee-syntax).~~
-
-```
-OK, I need to review LaTeX installation
-* To install further .cls or .sty packages
-:$ tlmgr init-usertree
-:$ tlmgr install <userpackage>
-```
+* To compile LaTeX files from within Atom, install [`latex`](https://atom.io/packages/latex). Just enable *Build on Save* and *Enable SyncTeX*.
+* To display the generated PDF in Atom you need [`pdf-view`](https://atom.io/packages/pdf-view), then make sure that *Auto reload on update* is enabled.
+* For the Syntax highlighting and snippets, get [`language-latex`](https://atom.io/packages/language-latex).
+* For LaTeX function autocompletion, [`latex-autocomplete`](https://atom.io/packages/latex-autocomplete).
+* To complete keys that have been used in `\label{}` and the `.bib` file, install [`autocomplete-latex-references`](https://atom.io/packages/autocomplete-latex-references).
+* autocomplete-bibtex
+* To show a document tree view for LaTeX, use [`latex tree`](https://atom.io/packages/latex-tree). Then go *Packages -> Latex Tree -> Toggle Tree View* to activate.
+* ~~Apparently the only LaTeX sensitive wordcount package is Aerijo's [`latex-wordcount`](https://atom.io/packages/latex-wordcount). It's still incomplete, but it does provide a couple of counting techniques.~~
+* ~~For an undistracted writing experience check out the [Typewriter](https://atom.io/themes/pen-paper-coffee-syntax) theme.~~
 
 <br />
 
