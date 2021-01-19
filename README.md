@@ -305,12 +305,11 @@ The external monitor that I am using for the Dual setting has some color problem
 ```
 
 - [x] **LaTeX**
-* This will install `texlive-latex-recommended`, `texlive-fonts-recommended`, `texlive-latex-base` and `texlive-base`. 
+* To avoid future problems with extra packages, install the full version of Tex Live. If other package installation problems should appear, this [thread](https://forums.linuxmint.com/viewtopic.php?t=300053) might help.
 ```
-:# apt install texlive
+:# apt install texlive-full
 :# apt install latexmk
 ```
-* To install a new package, you can run `tlmgr install <package>`. If an error appears similar to `tlmgr: Remote repository is newer than local (2017 < 2018)`   you can try installing the package using `apt` or by doing a full installation with `:# apt install texlive-full`. For more information, see [Installing Extra Packages for Tex Live]( https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages). If other package installation problems should appear, this [thread](https://forums.linuxmint.com/viewtopic.php?t=300053) should help.
 
 - [x] **Skype for Linux**
 ```
@@ -403,12 +402,10 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 :# sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 :# apt update
 ```
-* You can now install Atom using apt-get (or apt on Ubuntu):
+* You can now install Atom using `apt`:
 ```
 # Install Atom
 :# apt install atom
-# Install Atom Beta
-:# apt install atom-beta
 ```
 * Alternatively, you can download the Atom .deb package and install it directly:
 ```
@@ -417,13 +414,18 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 # Install Atom's dependencies if they are missing
 :# apt -f install
 ```
+* Some packages to consider installing would be [atom-updater-linux](https://atom.io/packages/atom-updater-linux) to keep Atom updated, and [minimap](https://atom.io/packages/minimap) to have a preview of the full source code.
+
 
 <br />
 
 - [x] **LaTeX for Atom** :link: [atom.io](https://atom.io)
-* To compile latex files from within Atom, use the `latex` [package](https://atom.io/packages/latex). Just enable *Build on Save* and *Enable SyncTeX*.
-* To display the generated PDF in Atom you need `pdf-view` [package](https://atom.io/packages/pdf-view). And make sure that *Auto reload on update* is enabled.
-* For the Syntax highlighting and snippets, use the `language-latex` [package](https://atom.io/packages/language-latex). 
+* To compile latex files from within Atom, install the `latex` [package](https://atom.io/packages/latex). Just enable *Build on Save* and *Enable SyncTeX*.
+* To display the generated PDF in Atom you need `pdf-view` [package](https://atom.io/packages/pdf-view). Then make sure that *Auto reload on update* is enabled.
+* For the Syntax highlighting and snippets, install the `language-latex` [package](https://atom.io/packages/language-latex).
+* For LaTeX function autocompletion, install the `latex-autocomplete` [package](https://atom.io/packages/latex-autocomplete).
+* To complete keys that have been used in `\label{}` and the `.bib` file, install the `autocomplete-latex-references` [package](https://atom.io/packages/autocomplete-latex-references).
+* To show a document tree view for LaTeX, install the `latex tree` [package](https://atom.io/packages/latex-tree). Then go *Packages -> Latex Tree -> Toggle Tree View* to activate.
 * ~~For an undistracted writing experience check out Typewriter (https://atom.io/themes/pen-paper-coffee-syntax).~~
 
 ```
