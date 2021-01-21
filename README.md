@@ -419,13 +419,12 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 <br />
 
 - [x] **LaTeX for Atom** :link: [atom.io](https://atom.io)
-* To compile LaTeX files from within Atom, install [`latex`](https://atom.io/packages/latex). Just enable *Build on Save* and *Enable SyncTeX*.
+* To compile LaTeX files from within Atom, install [`latex`](https://atom.io/packages/latex). Just enable *Build on Save* and *Enable SyncTeX*, and make `build` your *Output Directory*.
 * To display the generated PDF in Atom you need [`pdf-view`](https://atom.io/packages/pdf-view), then make sure that *Auto reload on update* is enabled.
 * For the Syntax highlighting and snippets, get [`language-latex`](https://atom.io/packages/language-latex).
-* For LaTeX function autocompletion, [`latex-autocomplete`](https://atom.io/packages/latex-autocomplete).
-* To complete keys that have been used in `\label{}` and the `.bib` file, install [`autocomplete-latex-references`](https://atom.io/packages/autocomplete-latex-references).
-* autocomplete-bibtex
+* To autocomplete citations, environments and references, the best package I've found is [`laxeter`](https://atom.io/packages/latexer).
 * To show a document tree view for LaTeX, use [`latex tree`](https://atom.io/packages/latex-tree). Then go *Packages -> Latex Tree -> Toggle Tree View* to activate.
+* ~~For LaTeX function autocompletion, [`latex-autocomplete`](https://atom.io/packages/latex-autocomplete).~~
 * ~~Apparently the only LaTeX sensitive wordcount package is Aerijo's [`latex-wordcount`](https://atom.io/packages/latex-wordcount). It's still incomplete, but it does provide a couple of counting techniques.~~
 * ~~For an undistracted writing experience check out the [Typewriter](https://atom.io/themes/pen-paper-coffee-syntax) theme.~~
 
