@@ -425,7 +425,7 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 <br />
 
 - [x] **LaTeX for Atom** :link: [atom.io](https://atom.io)
-* To compile LaTeX files from within Atom, install [`latex`](https://atom.io/packages/latex). Just enable *Build on Save* and *Enable SyncTeX*, and make `build` your *Output Directory*.
+* To compile LaTeX files from within Atom, install [`latex`](https://atom.io/packages/latex). Just enable ~~*Build on Save* and~~ *Enable SyncTeX*, and make `build` your *Output Directory*.
 * To display the generated PDF in Atom you need [`pdf-view`](https://atom.io/packages/pdf-view), then make sure that *Auto reload on update* is enabled.
 * For the Syntax highlighting and snippets, get [`language-latex`](https://atom.io/packages/language-latex).
 * To autocomplete citations, environments and references, the best package I've found is [`laxeter`](https://atom.io/packages/latexer).
