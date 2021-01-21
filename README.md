@@ -414,7 +414,13 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 # Install Atom's dependencies if they are missing
 :# apt -f install
 ```
-* Some packages to consider installing would be [atom-updater-linux](https://atom.io/packages/atom-updater-linux) to keep Atom updated, and [minimap](https://atom.io/packages/minimap) to have a preview of the full source code.
+* Some packages to consider installing would be:
+  - [atom-updater-linux](https://atom.io/packages/atom-updater-linux) - Checks automatically for updates when opening Atom.
+  - [minimap](https://atom.io/packages/minimap) - Displays a preview of the full source code.
+  - [Linter](https://atom.io/packages/linter) - Checks and cleans your code. Consider looking specific Linter packages for your language.
+  - [Atom Beautify](https://atom.io/packages/atom-beautify) - To properly format your code.
+  - ~~[Todo](https://atom.io/packages/todo) - An in *ToDo* list inside Atom.~~
+  - ~~[File Icons](https://atom.io/packages/file-icons) - Shows icons of files depending on their type.~~
 
 <br />
 
