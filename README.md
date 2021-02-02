@@ -430,6 +430,7 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 * For the Syntax highlighting and snippets, get [`language-latex`](https://atom.io/packages/language-latex).
 * To autocomplete citations, environments and references, the best package I've found is [`laxeter`](https://atom.io/packages/latexer).
 * To show a document tree view for LaTeX, use [`latex tree`](https://atom.io/packages/latex-tree). Then go *Packages -> Latex Tree -> Toggle Tree View* to activate.
+* To spell check your LaTeX file, use the Core Package `Spell Check`. Just add `text.tex.latex` into the *Grammar Settings*.
 * ~~For LaTeX function autocompletion, [`latex-autocomplete`](https://atom.io/packages/latex-autocomplete).~~
 * ~~Apparently the only LaTeX sensitive wordcount package is Aerijo's [`latex-wordcount`](https://atom.io/packages/latex-wordcount). It's still incomplete, but it does provide a couple of counting techniques.~~
 * ~~For an undistracted writing experience check out the [Typewriter](https://atom.io/themes/pen-paper-coffee-syntax) theme.~~
