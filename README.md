@@ -19,7 +19,7 @@ Intel Core2 Duo P7350 @ 2x 1.995Ghz | amd64 EFI | 4GB RAM | NVIDIA GeForce 9400M
 
 UEFI Boot with GUID Partition Table
 
-* From this point on ':$' means instructions in the command line and ':#' means that the instuctions should be run as 'root' or with 'sudo'.
+* From this point on `:$` means instructions in the command line and `:#` means that the instuctions should be run as `root` or with `sudo`.
 
 ---
 
