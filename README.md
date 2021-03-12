@@ -415,9 +415,9 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 :# apt -f install
 ```
 * Some packages to consider installing would be:
-  - [atom-updater-linux](https://atom.io/packages/atom-updater-linux) by *andyrichardson* - Checks automatically for updates when opening Atom.
-  - [minimap](https://atom.io/packages/minimap) by *atom-minimap* - Displays a preview of the full source code.
-  - [atom-beautify](https://atom.io/packages/atom-beautify) by *Glavin001* - To properly format your code.
+  - [atom-updater-linux by andyrichardson](https://atom.io/packages/atom-updater-linux) - Checks automatically for updates when opening Atom.
+  - [minimap by atom-minimap](https://atom.io/packages/minimap) - Displays a preview of the full source code.
+  - [atom-beautify by Glavin001](https://atom.io/packages/atom-beautify) - To properly format your code.
   - ~~[linter](https://atom.io/packages/linter) - Checks and cleans your code. Consider looking specific Linter packages for your language.~~
   - ~~[Todo](https://atom.io/packages/todo) - An in *ToDo* list inside Atom.~~
   - ~~[File Icons](https://atom.io/packages/file-icons) - Shows icons of files depending on their type.~~
@@ -425,11 +425,11 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 <br />
 
 - [x] **LaTeX for Atom** :link: [atom.io](https://atom.io)
-* To compile LaTeX files from within Atom, install [`latex`](https://atom.io/packages/latex) by *thomasjo*. Just enable ~~*Build on Save* and~~ *Enable SyncTeX*, and make `build` your *Output Directory*.
-* To display the generated PDF in Atom you need [`pdf-view`](https://atom.io/packages/pdf-view) by *izuzak*, then make sure that *Auto reload on update* is enabled.
-* For the Syntax highlighting and snippets, get [`language-latex`](https://atom.io/packages/language-latex) by *area*.
-* To autocomplete citations, environments and references, the best package I've found is [`latexer`](https://atom.io/packages/latexer) by *Focus*.
-* To show a document tree view for LaTeX, use [`latex-tree`](https://atom.io/packages/latex-tree) by *raphael-cch*. Then go *Packages -> Latex Tree -> Toggle Tree View* to activate.
+* To compile LaTeX files from within Atom, install [`latex` by thomasjo](https://atom.io/packages/latex). Make sure *Enable SyncTeX* is selected and make `build` your *Output Directory* (You can also tick *Build on Save* and will do that every time you save).
+* To display the generated PDF in Atom you need [`pdf-view` by izuzak](https://atom.io/packages/pdf-view), then make sure that *Auto reload on update* is enabled.
+* For the Syntax highlighting and snippets, get [`language-latex` by area](https://atom.io/packages/language-latex).
+* To autocomplete citations, environments and references, the best package I've found is [`latexer` by Focus](https://atom.io/packages/latexer).
+* To show a document tree view for LaTeX, use [`latex-tree` by raphael-cch](https://atom.io/packages/latex-tree). Then go *Packages -> Latex Tree -> Toggle Tree View* to activate.
 * To spell check your LaTeX file, use the Core Package `spell-check`. Just add `text.tex.latex` into the *Grammar Settings*.
 * ~~For LaTeX function autocompletion, [`latex-autocomplete`](https://atom.io/packages/latex-autocomplete).~~
 * ~~Apparently the only LaTeX sensitive wordcount package is Aerijo's [`latex-wordcount`](https://atom.io/packages/latex-wordcount). It's still incomplete, but it does provide a couple of counting techniques.~~
