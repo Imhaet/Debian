@@ -418,6 +418,7 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
   - [atom-updater-linux by andyrichardson](https://atom.io/packages/atom-updater-linux) - Checks automatically for updates when opening Atom.
   - [minimap by atom-minimap](https://atom.io/packages/minimap) - Displays a preview of the full source code.
   - [atom-beautify by Glavin001](https://atom.io/packages/atom-beautify) - To properly format your code.
+  - [git-plus by Akonwi](https://atom.io/packages/git-plus) - Do git things without the terminal.
   - ~~[linter](https://atom.io/packages/linter) - Checks and cleans your code. Consider looking specific Linter packages for your language.~~
   - ~~[Todo](https://atom.io/packages/todo) - An in *ToDo* list inside Atom.~~
   - ~~[File Icons](https://atom.io/packages/file-icons) - Shows icons of files depending on their type.~~
