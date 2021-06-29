@@ -316,6 +316,16 @@ The external monitor that I am using for the Dual setting has some color problem
 :$ wget https://go.skype.com/skypeforlinux-64.deb
 :# apt install ./skypeforlinux-64.deb
 ```
+* Sometimes when trying to update with 'apt update' like:
+```
+W: Errore GPG: https://repo.skype.com/deb stable InRelease: Le seguenti firme non sono state verificate perché la chiave pubblica non è disponibile: NO_PUBKEY 1F3045A5DF7587C3
+E: The repository 'https://repo.skype.com/deb stable InRelease' is not signed.
+N: 
+```
+The problem is that after installing skype using its deb installer, it will add skype's repositories into your sources file, after adding a repository to your sources, you should add its public key too, however it seems that Skype did not add its public key to your system so you should add it manually:
+```
+wget -O - https://repo.skype.com/data/SKYPE-GPG-KEY | sudo apt-key add - 
+```
 
 ---
 
