@@ -129,7 +129,6 @@ This process is based on the information from [ArchLinux Wiki](https://wiki.arch
 <br />
 
 - [X] **Bluetooth** :large_blue_diamond:
-
 **Important:** The following procedure is incomplete and untested.
 ```
 :# apt install bluez blueman
@@ -141,7 +140,6 @@ This process is based on the information from [ArchLinux Wiki](https://wiki.arch
 <br />
 
 - [x] **Dual Displays** :desktop_computer:
-
 *If you are not using dual displays, it may just be easier to stick with the open-source `nouveau` drivers.*
 
 While XFCE4 is the lightweight linux desktop environments, it is not the friendliest when using multiple displays. This comes from the fact that XFCE treats the display arrangement as one big workspace. So, to simplify things, XFCE prefers to arrenge the 2nd monitor to the right of the primary display, which may not be the configuration that you prefer (I have my Laptop usually on the right). Also, the out-of-the-box `nouveau` drivers limits the max resolution of the external monitor if connected through VGA, thus we may want to change the Graphic Card drivers to the propietary `NVIDIA` ones. Most of this process is based on the information from the [Nvidia Graphics Drivers Wiki](https://wiki.debian.org/NvidiaGraphicsDrivers).
@@ -217,7 +215,6 @@ EndSection
 <br />
 
 - [X] **External Monitor color correction with NVIDIA drivers**
-
 The external monitor that I am using for the Dual setting has some color problems. The NVIDIA X driver dows not preserve the values set with nvidia-settings between runs of the Xserver (or even between logging in and logging out of X). This is intentional, because different users may have different preferences, thus these settings are stored on a per user basis in a configuration file stored in the user's home directory.
 
 * Open `nvidia-settings`, go to *GPU 0 - (GeForce 9400M) -> DFP-2 (HP ZZ3i) -> Color Correction* and change the **Brighness** and **Gamma** for each individual Active Color Channel. The following values are the best that I have at the moment:
@@ -241,33 +238,12 @@ The external monitor that I am using for the Dual setting has some color problem
 <br />
 
 - [x] **Screen Brightness with NVIDIA drivers**
+**Important:** The following procedure is incomplete and untested.
 * After installing the NVIDIA drivers, you won't be able to change the screen brightness. To fix this we need to edit the Xorg configuration file `/etc/X11/xorg.conf` again by adding the following line under the `Screen` section:
 
 `Option         "RegistryDwords" "EnableBrightnessControl=1;"`
 
 * Reboot again for the changes to take effect.
-
-```
-You also need to set 'Virtual' the get the most out of you hardware, this is the overall space you have to work with in your screens. The intel driver supports a max of 2048x2048 before turning off DRI. I dont think you can change this while X is running so xrandr won't be able to make use the extra space until x is restarted. If you have a wide screen already, I suggest setting up the macbook below the screen as you can then fit a 1920x1200 monitor.
-
-Section "Screen"
-        Identifier      "Default Screen"
-        SubSection      "Display"
-                Virtual 2048 2048
-        EndSubSection
-EndSection
-
-You can also generate a skeleton for xorg.conf with:
-# Xorg :0 -configure
-Or 'Xorg :2 -configure' if you are already running an X server.
-This should create a xorg.conf.new file in /root/ that you can copy over to /etc/X11/xorg.conf
-
-For the next part we need to switch to a single user console like tty3 (not a terminal emulator in X) by pressing Ctl+Alt+F3.
-then do alll the shit above... 
-
-didn't work!
-
-```
 
 ---
 
