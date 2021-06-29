@@ -129,20 +129,14 @@ This process is based on the information from [ArchLinux Wiki](https://wiki.arch
 <br />
 
 - [X] **Bluetooth** :large_blue_diamond:
+
+**Important:** The following procedure is incomplete and untested.
 ```
-This is not proven
 :# apt install bluez blueman
-From here, it should instal a bluetooth manager to pair a blouetooth device
-
-LOL, it did not, so i ran
-:$ hcidev
-to prove it was installed
-
-then
-:$ hciscan
-to find out the bluetooth device i wanted to pair
-and somehow it works now... need to redo this
 ```
+* From here, it should instal a bluetooth manager to pair a blouetooth device...
+* LOL, it did not, so I ran`:$ hcidev` to prove it was installed, then `:$ hciscan` to find out the bluetooth device I wanted to pair and somehow it works now...
+:laughing:
 
 <br />
 
@@ -219,12 +213,6 @@ EndSection
 * After the system reboots, connect the external monitor, open the `xfce4-display-settings` and configure your setup. (i.e., HP 23", Resolution - 1920x1080, 60.0Hz, Rotation - Left or None, position (0,0)). Make sure to set the `Laptop` display as the Primay display. *Note:* You may want to deselect the `Configure new displays when connected` option.
 
 **Important:** After some trial and error it appears that the best practice regarding switching between the laptop and the dual monitor is to connect all the cables before turning on the machine, this way all the settings are preserved. It is still possible to connect/disconnect the display, but you may need to reconfigure all your external monitor settings and position.
-
-```
-It looks like the sleep thing works though
-the loading screen is brown instead of blue
-disable nvidia splash screen?
-```
 
 <br />
 
