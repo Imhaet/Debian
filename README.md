@@ -247,6 +247,28 @@ The external monitor that I am using for the Dual setting has some color problem
 
 * Reboot again for the changes to take effect.
 
+```
+You also need to set 'Virtual' the get the most out of you hardware, this is the overall space you have to work with in your screens. The intel driver supports a max of 2048x2048 before turning off DRI. I dont think you can change this while X is running so xrandr won't be able to make use the extra space until x is restarted. If you have a wide screen already, I suggest setting up the macbook below the screen as you can then fit a 1920x1200 monitor.
+
+Section "Screen"
+        Identifier      "Default Screen"
+        SubSection      "Display"
+                Virtual 2048 2048
+        EndSubSection
+EndSection
+
+You can also generate a skeleton for xorg.conf with:
+# Xorg :0 -configure
+Or 'Xorg :2 -configure' if you are already running an X server.
+This should create a xorg.conf.new file in /root/ that you can copy over to /etc/X11/xorg.conf
+
+For the next part we need to switch to a single user console like tty3 (not a terminal emulator in X) by pressing Ctl+Alt+F3.
+then do alll the shit above... 
+
+didn't work!
+
+```
+
 ---
 
 <br />
