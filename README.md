@@ -129,6 +129,7 @@ This process is based on the information from [ArchLinux Wiki](https://wiki.arch
 <br />
 
 - [X] **Bluetooth** :large_blue_diamond:
+
 **Important:** The following procedure is incomplete and untested.
 ```
 :# apt install bluez blueman
@@ -140,6 +141,7 @@ This process is based on the information from [ArchLinux Wiki](https://wiki.arch
 <br />
 
 - [x] **Dual Displays** :desktop_computer:
+
 *If you are not using dual displays, it may just be easier to stick with the open-source `nouveau` drivers.*
 
 While XFCE4 is the lightweight linux desktop environments, it is not the friendliest when using multiple displays. This comes from the fact that XFCE treats the display arrangement as one big workspace. So, to simplify things, XFCE prefers to arrenge the 2nd monitor to the right of the primary display, which may not be the configuration that you prefer (I have my Laptop usually on the right). Also, the out-of-the-box `nouveau` drivers limits the max resolution of the external monitor if connected through VGA, thus we may want to change the Graphic Card drivers to the propietary `NVIDIA` ones. Most of this process is based on the information from the [Nvidia Graphics Drivers Wiki](https://wiki.debian.org/NvidiaGraphicsDrivers).
@@ -238,6 +240,7 @@ The external monitor that I am using for the Dual setting has some color problem
 <br />
 
 - [x] **Screen Brightness with NVIDIA drivers**
+
 **Important:** The following procedure is incomplete and untested.
 * After installing the NVIDIA drivers, you won't be able to change the screen brightness. To fix this we need to edit the Xorg configuration file `/etc/X11/xorg.conf` again by adding the following line under the `Screen` section:
 
