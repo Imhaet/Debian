@@ -293,14 +293,7 @@ The external monitor that I am using for the Dual setting has some color problem
 :# apt install firefox
 ```
 
-- [x] **LaTeX**
-* To avoid future problems with extra packages, install the full version of Tex Live. If other package installation problems should appear, this [thread](https://forums.linuxmint.com/viewtopic.php?t=300053) might help.
-```
-:# apt install texlive-full
-:# apt install latexmk
-```
-
-- [x] **Skype for Linux**
+- [x] ~~**Skype for Linux**~~
 ```
 :$ wget https://go.skype.com/skypeforlinux-64.deb
 :# apt install ./skypeforlinux-64.deb
@@ -386,6 +379,9 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 - [x] **Kill Frozen Applications**
 * `xkill` runs with *Ctrl+Alt+Esc*
 
+- [x] **Opening File Manager**
+* `thunar` runs with *Super+E* (A leftover from Windows Explorer)
+
 ---
 
 <br />
@@ -393,6 +389,13 @@ Go to *Settings Manager -> Keyboard -> Application Shortcuts*.
 ## FINISHING (OPTIONAL) TOUCHES
 
 <br />
+
+- [x] **LaTeX**
+* To avoid future problems with extra packages, install the full version of Tex Live. If other package installation problems should appear, this [thread](https://forums.linuxmint.com/viewtopic.php?t=300053) might help.
+```
+:# apt install texlive-full
+:# apt install latexmk
+```
 
 - [x] **Atom** :link: [atom.io](https://atom.io)
 * To install Atom on Debian, Ubuntu, or related distributions, add our official package repository to your system by running the following commands:
@@ -516,8 +519,8 @@ Following are my personal settings for the DE in XFCE.
 - [x] **Window Manager**
 * *Style* -> **Flat-Remix-GTK-Blue-Dark**
 * *Style | Button layout* -> Remove the **Minimize** button
-* *Keyboard* -> `Tile window to the top` runs with **Super+Up**
-* *Keyboard* -> `Tile window to the bottom` runs with **Super+Down**
+* *Keyboard* -> `Maximize window` runs with **Super+Up**
+* *Keyboard* -> `Shade window` runs with **Super+Down**
 * *Keyboard* -> `Tile window to the left` runs with **Super+Left**
 * *Keyboard* -> `Tile window to the right` runs with **Super+Right**
 
